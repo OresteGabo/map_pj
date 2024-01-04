@@ -54,3 +54,15 @@ int Path::getSize()const{
 PathNode* Path::getHead()const{
     return head;
 }
+void Path::draw(QPainter& painter) const {
+    // Draw the car at its current position
+    painter.setBrush(QBrush(Qt::green));
+    PathNode* s=head;
+    if(s==nullptr)return;
+    while(s->next){
+        painter.drawLine(s->getArret()->x(),s->getArret()->y(),s->next->getArret()->x(),s->next->getArret()->y());
+        s=s->next;
+    }
+
+    //painter.drawEllipse(position.x(), position.y(), 20, 20);
+}

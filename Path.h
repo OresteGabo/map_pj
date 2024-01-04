@@ -17,6 +17,7 @@ public:
     PathNode* getFinalPath()const;
     int getSize()const;
     PathNode* getHead()const;
+    void draw(QPainter& painter) const;
 private:
     PathNode* head;
 };

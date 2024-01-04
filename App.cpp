@@ -81,6 +81,9 @@ void App::initialize() {
     Path* p3=new Path(node20);
     p3->addNode(node21)->addNode(node22)->addNode(node23);
 
+    paths.push_back(p1);
+    paths.push_back(p2);
+    paths.push_back(p3);
 
 
     auto car1 = new Car(p1->getHead(), 350.0);  // Car associated with Arret 1
@@ -114,5 +117,11 @@ void App::drawCars(QPainter& painter) const {
     // Draw all Cars in the App
     for (const Car* car : cars) {
         car->draw(painter);
+    }
+}
+void App::drawPaths(QPainter& painter) const {
+    // Draw all paths in the App
+    for (const Path* path : paths) {
+        path->draw(painter);
     }
 }

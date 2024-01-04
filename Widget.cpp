@@ -71,16 +71,14 @@ void Widget::paintEvent(QPaintEvent*) {
 
     // Call the custom drawing function for your app
     dessineApp(painter, d_app);
+
 }
 
 void Widget::dessineApp(QPainter& painter, const App& app) {
     // Draw all Arrets in the App
     app.drawArrets(painter);
-
-    // Draw all Cars in the App
-    for (Car* car : d_app.getCars()) {
-        car->draw(painter);
-    }
+    app.drawCars(painter);
+    app.drawPaths(painter);
 }
 
 void Widget::mousePressEvent(QMouseEvent* event) {
@@ -98,9 +96,9 @@ void Widget::updateCarPosition() {
     // Update the cars' positions based on the associated Arret
     const Arret* associatedArret = d_app.getArrets()[0];  // Use the first Arret for demonstration
 
-    for (Car* car : cars) {
+    /*for (Car* car : cars) {
         car->setPosition(QPointF(associatedArret->x(), associatedArret->y()));
-    }
+    }*/
 
     // Redraw the widget
     update();

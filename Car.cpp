@@ -3,7 +3,7 @@
 #include <QBrush>
 #include <QtMath>
 
-Car::Car(PathNode* destinationPathHead, double speed) : speed(speed), destinationPathHead(destinationPathHead) {
+Car::Car(PathNode* destinationPathHead, double speed) : speed(speed), destinationPathHead(destinationPathHead),position(destinationPathHead->getArret()->toPoint()) {
     // Set the initial position based on the starting destination node
     if (destinationPathHead) {
         position = QPointF(destinationPathHead->getArret()->x(), destinationPathHead->getArret()->y());
@@ -15,6 +15,7 @@ Car::Car(PathNode* destinationPathHead, double speed) : speed(speed), destinatio
         qDebug()<<"The car initialised with 0,0";
         nextDestinationNode = nullptr;
     }
+
 }
 
 void Car::updatePosition(qreal elapsedTime) {
@@ -43,10 +44,10 @@ void Car::updatePosition(qreal elapsedTime) {
 void Car::draw(QPainter& painter) const {
     // Draw the car at its current position
     painter.setBrush(QBrush(Qt::blue));
-    painter.drawEllipse(position.x(), position.y(), 20, 20);
+    painter.drawEllipse(position.x()-10, position.y()-10, 20, 20);
 }
 
 
 void Car::setPosition(const QPointF &p) {
-    position = p;
+    //position = p;
 }

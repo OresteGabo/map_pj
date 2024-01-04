@@ -16,6 +16,7 @@
 #include <vector>
 #include "Arret.h"
 #include "Car.h"
+#include "Path.h"
 #include <QRandomGenerator>
 
 class App {
@@ -28,11 +29,13 @@ public:
     const std::vector<Car*>& getCars() const;
     void drawArrets(QPainter& painter) const;
     void drawCars(QPainter& painter) const;
+    void drawPaths(QPainter& painter) const;
 
 
 private:
     std::vector<Arret*> arrets;
     std::vector<Car*> cars;
+    std::vector<Path*>paths;
 };
 
 
