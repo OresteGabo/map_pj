@@ -41,7 +41,7 @@ void Car::updatePosition(qreal elapsedTime) {
 void Car::draw(QPainter& painter) const {
     // Draw the car at its current position
     painter.setBrush(QBrush(Qt::blue));
-    painter.drawRect(position.x(), position.y(), 30, 15);
+    painter.drawEllipse(position.x(), position.y(), 20, 20);
 }
 
 

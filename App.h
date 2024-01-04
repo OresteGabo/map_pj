@@ -16,6 +16,7 @@
 #include <vector>
 #include "Arret.h"
 #include "Car.h"
+#include <QRandomGenerator>
 
 class App {
 public:
