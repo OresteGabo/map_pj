@@ -1,0 +1,381 @@
+{
+	"BUILD_DIR" : "/home/oreste/Desktop/M1/map_pj/cmake-build-debug/QMapControl 0.9.7.9/QMapControl/QMapControl_autogen",
+	"CMAKE_BINARY_DIR" : "/home/oreste/Desktop/M1/map_pj/cmake-build-debug",
+	"CMAKE_CURRENT_BINARY_DIR" : "/home/oreste/Desktop/M1/map_pj/cmake-build-debug/QMapControl 0.9.7.9/QMapControl",
+	"CMAKE_CURRENT_SOURCE_DIR" : "/home/oreste/Desktop/M1/map_pj/QMapControl 0.9.7.9/QMapControl",
+	"CMAKE_EXECUTABLE" : "/home/oreste/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/bin/cmake",
+	"CMAKE_LIST_FILES" : 
+	[
+		"/home/oreste/Desktop/M1/map_pj/QMapControl 0.9.7.9/QMapControl/CMakeLists.txt",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt5/Qt5ConfigVersion.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt5/Qt5Config.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt5/Qt5ModuleLocation.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt5Core/Qt5CoreConfigVersion.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt5Core/Qt5CoreConfig.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5GuiConfigVersion.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5GuiConfig.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt5Widgets/Qt5WidgetsConfigVersion.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt5Widgets/Qt5WidgetsConfig.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt5Network/Qt5NetworkConfigVersion.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt5Network/Qt5NetworkConfig.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt5Network/Qt5Network_QConnmanEnginePlugin.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt5Network/Qt5Network_QGenericEnginePlugin.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt5Network/Qt5Network_QNetworkManagerEnginePlugin.cmake"
+	],
+	"CMAKE_SOURCE_DIR" : "/home/oreste/Desktop/M1/map_pj",
+	"DEP_FILE" : "/home/oreste/Desktop/M1/map_pj/cmake-build-debug/QMapControl 0.9.7.9/QMapControl/QMapControl_autogen/deps",
+	"DEP_FILE_RULE_NAME" : "QMapControl_autogen/timestamp",
+	"HEADERS" : 
+	[
+		[
+			"/home/oreste/Desktop/M1/map_pj/QMapControl 0.9.7.9/QMapControl/src/arrowpoint.h",
+			"MU",
+			"UVLADIE3JM/moc_arrowpoint.cpp",
+			null
+		],
+		[
+			"/home/oreste/Desktop/M1/map_pj/QMapControl 0.9.7.9/QMapControl/src/bingapimapadapter.h",
+			"MU",
+			"UVLADIE3JM/moc_bingapimapadapter.cpp",
+			null
+		],
+		[
+			"/home/oreste/Desktop/M1/map_pj/QMapControl 0.9.7.9/QMapControl/src/circlepoint.h",
+			"MU",
+			"UVLADIE3JM/moc_circlepoint.cpp",
+			null
+		],
+		[
+			"/home/oreste/Desktop/M1/map_pj/QMapControl 0.9.7.9/QMapControl/src/curve.h",
+			"MU",
+			"UVLADIE3JM/moc_curve.cpp",
+			null
+		],
+		[
+			"/home/oreste/Desktop/M1/map_pj/QMapControl 0.9.7.9/QMapControl/src/emptymapadapter.h",
+			"MU",
+			"UVLADIE3JM/moc_emptymapadapter.cpp",
+			null
+		],
+		[
+			"/home/oreste/Desktop/M1/map_pj/QMapControl 0.9.7.9/QMapControl/src/fixedimageoverlay.h",
+			"MU",
+			"UVLADIE3JM/moc_fixedimageoverlay.cpp",
+			null
+		],
+		[
+			"/home/oreste/Desktop/M1/map_pj/QMapControl 0.9.7.9/QMapControl/src/geometry.h",
+			"MU",
+			"UVLADIE3JM/moc_geometry.cpp",
+			null
+		],
+		[
+			"/home/oreste/Desktop/M1/map_pj/QMapControl 0.9.7.9/QMapControl/src/geometrylayer.h",
+			"MU",
+			"UVLADIE3JM/moc_geometrylayer.cpp",
+			null
+		],
+		[
+			"/home/oreste/Desktop/M1/map_pj/QMapControl 0.9.7.9/QMapControl/src/googleapimapadapter.h",
+			"MU",
+			"UVLADIE3JM/moc_googleapimapadapter.cpp",
+			null
+		],
+		[
+			"/home/oreste/Desktop/M1/map_pj/QMapControl 0.9.7.9/QMapControl/src/googlemapadapter.h",
+			"MU",
+			"UVLADIE3JM/moc_googlemapadapter.cpp",
+			null
+		],
+		[
+			"/home/oreste/Desktop/M1/map_pj/QMapControl 0.9.7.9/QMapControl/src/gps_position.h",
+			"MU",
+			"UVLADIE3JM/moc_gps_position.cpp",
+			null
+		],
+		[
+			"/home/oreste/Desktop/M1/map_pj/QMapControl 0.9.7.9/QMapControl/src/imagemanager.h",
+			"MU",
+			"UVLADIE3JM/moc_imagemanager.cpp",
+			null
+		],
+		[
+			"/home/oreste/Desktop/M1/map_pj/QMapControl 0.9.7.9/QMapControl/src/imagepoint.h",
+			"MU",
+			"UVLADIE3JM/moc_imagepoint.cpp",
+			null
+		],
+		[
+			"/home/oreste/Desktop/M1/map_pj/QMapControl 0.9.7.9/QMapControl/src/invisiblepoint.h",
+			"MU",
+			"UVLADIE3JM/moc_invisiblepoint.cpp",
+			null
+		],
+		[
+			"/home/oreste/Desktop/M1/map_pj/QMapControl 0.9.7.9/QMapControl/src/layer.h",
+			"MU",
+			"UVLADIE3JM/moc_layer.cpp",
+			null
+		],
+		[
+			"/home/oreste/Desktop/M1/map_pj/QMapControl 0.9.7.9/QMapControl/src/layermanager.h",
+			"MU",
+			"UVLADIE3JM/moc_layermanager.cpp",
+			null
+		],
+		[
+			"/home/oreste/Desktop/M1/map_pj/QMapControl 0.9.7.9/QMapControl/src/linestring.h",
+			"MU",
+			"UVLADIE3JM/moc_linestring.cpp",
+			null
+		],
+		[
+			"/home/oreste/Desktop/M1/map_pj/QMapControl 0.9.7.9/QMapControl/src/mapadapter.h",
+			"MU",
+			"UVLADIE3JM/moc_mapadapter.cpp",
+			null
+		],
+		[
+			"/home/oreste/Desktop/M1/map_pj/QMapControl 0.9.7.9/QMapControl/src/mapcontrol.h",
+			"MU",
+			"UVLADIE3JM/moc_mapcontrol.cpp",
+			null
+		],
+		[
+			"/home/oreste/Desktop/M1/map_pj/QMapControl 0.9.7.9/QMapControl/src/maplayer.h",
+			"MU",
+			"UVLADIE3JM/moc_maplayer.cpp",
+			null
+		],
+		[
+			"/home/oreste/Desktop/M1/map_pj/QMapControl 0.9.7.9/QMapControl/src/mapnetwork.h",
+			"MU",
+			"UVLADIE3JM/moc_mapnetwork.cpp",
+			null
+		],
+		[
+			"/home/oreste/Desktop/M1/map_pj/QMapControl 0.9.7.9/QMapControl/src/openaerialmapadapter.h",
+			"MU",
+			"UVLADIE3JM/moc_openaerialmapadapter.cpp",
+			null
+		],
+		[
+			"/home/oreste/Desktop/M1/map_pj/QMapControl 0.9.7.9/QMapControl/src/osmmapadapter.h",
+			"MU",
+			"UVLADIE3JM/moc_osmmapadapter.cpp",
+			null
+		],
+		[
+			"/home/oreste/Desktop/M1/map_pj/QMapControl 0.9.7.9/QMapControl/src/point.h",
+			"MU",
+			"UVLADIE3JM/moc_point.cpp",
+			null
+		],
+		[
+			"/home/oreste/Desktop/M1/map_pj/QMapControl 0.9.7.9/QMapControl/src/qmapcontrol_global.h",
+			"MU",
+			"UVLADIE3JM/moc_qmapcontrol_global.cpp",
+			null
+		],
+		[
+			"/home/oreste/Desktop/M1/map_pj/QMapControl 0.9.7.9/QMapControl/src/tilemapadapter.h",
+			"MU",
+			"UVLADIE3JM/moc_tilemapadapter.cpp",
+			null
+		],
+		[
+			"/home/oreste/Desktop/M1/map_pj/QMapControl 0.9.7.9/QMapControl/src/wmsmapadapter.h",
+			"MU",
+			"UVLADIE3JM/moc_wmsmapadapter.cpp",
+			null
+		]
+	],
+	"HEADER_EXTENSIONS" : [ "h", "hh", "h++", "hm", "hpp", "hxx", "in", "txx" ],
+	"INCLUDE_DIR" : "/home/oreste/Desktop/M1/map_pj/cmake-build-debug/QMapControl 0.9.7.9/QMapControl/QMapControl_autogen/include",
+	"MOC_COMPILATION_FILE" : "/home/oreste/Desktop/M1/map_pj/cmake-build-debug/QMapControl 0.9.7.9/QMapControl/QMapControl_autogen/mocs_compilation.cpp",
+	"MOC_DEFINITIONS" : [ "QT_CORE_LIB", "QT_GUI_LIB", "QT_NETWORK_LIB", "QT_WIDGETS_LIB" ],
+	"MOC_DEPEND_FILTERS" : 
+	[
+		[
+			"Q_PLUGIN_METADATA",
+			"[\n][ \t]*Q_PLUGIN_METADATA[ \t]*\\([^\\)]*FILE[ \t]*\"([^\"]+)\""
+		]
+	],
+	"MOC_INCLUDES" : 
+	[
+		"/home/oreste/Desktop/M1/map_pj/QMapControl 0.9.7.9/QMapControl/src",
+		"/usr/include/x86_64-linux-gnu/qt5",
+		"/usr/include/x86_64-linux-gnu/qt5/QtCore",
+		"/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++",
+		"/usr/include/x86_64-linux-gnu/qt5/QtGui",
+		"/usr/include/x86_64-linux-gnu/qt5/QtWidgets",
+		"/usr/include/x86_64-linux-gnu/qt5/QtNetwork",
+		"/usr/include/c++/11",
+		"/usr/include/x86_64-linux-gnu/c++/11",
+		"/usr/include/c++/11/backward",
+		"/usr/lib/gcc/x86_64-linux-gnu/11/include",
+		"/usr/local/include",
+		"/usr/include/x86_64-linux-gnu",
+		"/usr/include"
+	],
+	"MOC_MACRO_NAMES" : [ "Q_OBJECT", "Q_GADGET", "Q_NAMESPACE", "Q_NAMESPACE_EXPORT" ],
+	"MOC_OPTIONS" : [],
+	"MOC_PATH_PREFIX" : false,
+	"MOC_PREDEFS_CMD" : 
+	[
+		"/usr/bin/c++",
+		"-dM",
+		"-E",
+		"-c",
+		"/home/oreste/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeCXXCompilerABI.cpp"
+	],
+	"MOC_PREDEFS_FILE" : "/home/oreste/Desktop/M1/map_pj/cmake-build-debug/QMapControl 0.9.7.9/QMapControl/QMapControl_autogen/moc_predefs.h",
+	"MOC_RELAXED_MODE" : false,
+	"MOC_SKIP" : [],
+	"MULTI_CONFIG" : false,
+	"PARALLEL" : 4,
+	"PARSE_CACHE_FILE" : "/home/oreste/Desktop/M1/map_pj/cmake-build-debug/QMapControl 0.9.7.9/QMapControl/CMakeFiles/QMapControl_autogen.dir/ParseCache.txt",
+	"QT_MOC_EXECUTABLE" : "/usr/lib/qt5/bin/moc",
+	"QT_UIC_EXECUTABLE" : "/usr/lib/qt5/bin/uic",
+	"QT_VERSION_MAJOR" : 5,
+	"QT_VERSION_MINOR" : 15,
+	"SETTINGS_FILE" : "/home/oreste/Desktop/M1/map_pj/cmake-build-debug/QMapControl 0.9.7.9/QMapControl/CMakeFiles/QMapControl_autogen.dir/AutogenUsed.txt",
+	"SOURCES" : 
+	[
+		[
+			"/home/oreste/Desktop/M1/map_pj/QMapControl 0.9.7.9/QMapControl/src/arrowpoint.cpp",
+			"MU",
+			null
+		],
+		[
+			"/home/oreste/Desktop/M1/map_pj/QMapControl 0.9.7.9/QMapControl/src/bingapimapadapter.cpp",
+			"MU",
+			null
+		],
+		[
+			"/home/oreste/Desktop/M1/map_pj/QMapControl 0.9.7.9/QMapControl/src/circlepoint.cpp",
+			"MU",
+			null
+		],
+		[
+			"/home/oreste/Desktop/M1/map_pj/QMapControl 0.9.7.9/QMapControl/src/curve.cpp",
+			"MU",
+			null
+		],
+		[
+			"/home/oreste/Desktop/M1/map_pj/QMapControl 0.9.7.9/QMapControl/src/emptymapadapter.cpp",
+			"MU",
+			null
+		],
+		[
+			"/home/oreste/Desktop/M1/map_pj/QMapControl 0.9.7.9/QMapControl/src/fixedimageoverlay.cpp",
+			"MU",
+			null
+		],
+		[
+			"/home/oreste/Desktop/M1/map_pj/QMapControl 0.9.7.9/QMapControl/src/geometry.cpp",
+			"MU",
+			null
+		],
+		[
+			"/home/oreste/Desktop/M1/map_pj/QMapControl 0.9.7.9/QMapControl/src/geometrylayer.cpp",
+			"MU",
+			null
+		],
+		[
+			"/home/oreste/Desktop/M1/map_pj/QMapControl 0.9.7.9/QMapControl/src/googleapimapadapter.cpp",
+			"MU",
+			null
+		],
+		[
+			"/home/oreste/Desktop/M1/map_pj/QMapControl 0.9.7.9/QMapControl/src/googlemapadapter.cpp",
+			"MU",
+			null
+		],
+		[
+			"/home/oreste/Desktop/M1/map_pj/QMapControl 0.9.7.9/QMapControl/src/gps_position.cpp",
+			"MU",
+			null
+		],
+		[
+			"/home/oreste/Desktop/M1/map_pj/QMapControl 0.9.7.9/QMapControl/src/imagemanager.cpp",
+			"MU",
+			null
+		],
+		[
+			"/home/oreste/Desktop/M1/map_pj/QMapControl 0.9.7.9/QMapControl/src/imagepoint.cpp",
+			"MU",
+			null
+		],
+		[
+			"/home/oreste/Desktop/M1/map_pj/QMapControl 0.9.7.9/QMapControl/src/invisiblepoint.cpp",
+			"MU",
+			null
+		],
+		[
+			"/home/oreste/Desktop/M1/map_pj/QMapControl 0.9.7.9/QMapControl/src/layer.cpp",
+			"MU",
+			null
+		],
+		[
+			"/home/oreste/Desktop/M1/map_pj/QMapControl 0.9.7.9/QMapControl/src/layermanager.cpp",
+			"MU",
+			null
+		],
+		[
+			"/home/oreste/Desktop/M1/map_pj/QMapControl 0.9.7.9/QMapControl/src/linestring.cpp",
+			"MU",
+			null
+		],
+		[
+			"/home/oreste/Desktop/M1/map_pj/QMapControl 0.9.7.9/QMapControl/src/mapadapter.cpp",
+			"MU",
+			null
+		],
+		[
+			"/home/oreste/Desktop/M1/map_pj/QMapControl 0.9.7.9/QMapControl/src/mapcontrol.cpp",
+			"MU",
+			null
+		],
+		[
+			"/home/oreste/Desktop/M1/map_pj/QMapControl 0.9.7.9/QMapControl/src/maplayer.cpp",
+			"MU",
+			null
+		],
+		[
+			"/home/oreste/Desktop/M1/map_pj/QMapControl 0.9.7.9/QMapControl/src/mapnetwork.cpp",
+			"MU",
+			null
+		],
+		[
+			"/home/oreste/Desktop/M1/map_pj/QMapControl 0.9.7.9/QMapControl/src/openaerialmapadapter.cpp",
+			"MU",
+			null
+		],
+		[
+			"/home/oreste/Desktop/M1/map_pj/QMapControl 0.9.7.9/QMapControl/src/osmmapadapter.cpp",
+			"MU",
+			null
+		],
+		[
+			"/home/oreste/Desktop/M1/map_pj/QMapControl 0.9.7.9/QMapControl/src/point.cpp",
+			"MU",
+			null
+		],
+		[
+			"/home/oreste/Desktop/M1/map_pj/QMapControl 0.9.7.9/QMapControl/src/tilemapadapter.cpp",
+			"MU",
+			null
+		],
+		[
+			"/home/oreste/Desktop/M1/map_pj/QMapControl 0.9.7.9/QMapControl/src/wmsmapadapter.cpp",
+			"MU",
+			null
+		]
+	],
+	"UIC_OPTIONS" : [],
+	"UIC_SEARCH_PATHS" : [],
+	"UIC_SKIP" : [],
+	"UIC_UI_FILES" : [],
+	"VERBOSITY" : 0
+}

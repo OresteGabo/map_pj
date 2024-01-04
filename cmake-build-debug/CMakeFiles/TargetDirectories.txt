@@ -1,0 +1,5 @@
+/home/oreste/Desktop/M1/map_pj/cmake-build-debug/CMakeFiles/map_pj.dir
+/home/oreste/Desktop/M1/map_pj/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/oreste/Desktop/M1/map_pj/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/oreste/Desktop/M1/map_pj/cmake-build-debug/CMakeFiles/map_pj_autogen_timestamp_deps.dir
+/home/oreste/Desktop/M1/map_pj/cmake-build-debug/CMakeFiles/map_pj_autogen.dir
