@@ -6,8 +6,19 @@
 #define MAP_PJ_PATH_H
 
 
+#include "PathNode.h"
+
 class Path {
 
+public:
+    Path(PathNode* h=nullptr);
+    Path* addNode(PathNode*);
+    Path* addNode(Arret*);
+    PathNode* getFinalPath()const;
+    int getSize()const;
+    PathNode* getHead()const;
+private:
+    PathNode* head;
 };
 
 

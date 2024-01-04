@@ -14,7 +14,7 @@
 
 // Car.h
 #pragma once
-
+#include <qdebug.h>
 #include <QPainter>
 #include <QPointF>
 #include "PathNode.h"
@@ -30,7 +30,7 @@ public:
 private:
     QPointF position;
     qreal speed;
-    PathNode* destinationPathHead;
+    const PathNode* destinationPathHead;
     PathNode* nextDestinationNode;
 };
 

@@ -33,6 +33,26 @@ Widget::Widget(App& app, QWidget* parent) : QWidget(parent), d_app(app), animati
 
     // Set up initial animation
     updateCarPosition();
+
+
+    qreal hexSize = 50.0;  // Adjust size as needed
+    int numRows = 5;
+    int numCols = 5;
+
+    for (int row = 0; row < numRows; ++row) {
+        for (int col = 0; col < numCols; ++col) {
+            qreal x = col * 1.5 * hexSize;
+            qreal y = row * sqrt(3) * hexSize;
+
+            if (col % 2 == 1) {
+                y += sqrt(3) / 2 * hexSize;
+            }
+
+            QPointF hexCenter(x, y);
+            Hexagon hexagon(hexCenter, hexSize);
+            hexagons.push_back(hexagon);
+        }
+    }
 }
 
 Widget::~Widget() {
@@ -44,6 +64,10 @@ void Widget::paintEvent(QPaintEvent*) {
     // Draw the background image
     QPixmap backgroundImage("bg.png");
     painter.drawPixmap(rect(), backgroundImage, backgroundImage.rect());
+
+    for (const Hexagon& hexagon : hexagons) {
+        hexagon.draw(painter);
+    }
 
     // Call the custom drawing function for your app
     dessineApp(painter, d_app);

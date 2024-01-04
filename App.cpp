@@ -3,6 +3,7 @@
 
 // App.cpp
 #include "App.h"
+#include "Path.h"
 
 App::App() {
     initialize();
@@ -57,11 +58,6 @@ void App::initialize() {
     arrets.push_back(arret20);
     arrets.push_back(arret21);
 
-    // Create and initialize Cars
-    /*PathNode *node00,*node01,*node02,*node03;
-    PathNode *node10,*node11,*node12,*node13;
-    PathNode *node20,*node21,*node22,*node23;*/
-
     PathNode* node00 = new PathNode(arret1);
     PathNode* node01 = new PathNode(arret1);
     PathNode* node02 = new PathNode(arret2);
@@ -76,31 +72,27 @@ void App::initialize() {
     PathNode* node23 = new PathNode(arret12);
 
 
-    node00->next=node01;
-    node01->next=node02;
-    node02->next=node03;
+    Path* p1=new Path(node00);
+    p1->addNode(node01)->addNode(node02)->addNode(node03);
 
-    node10->next=node11;
-    node11->next=node12;
-    node12->next=node13;
+    Path* p2=new Path(node10);
+    p2->addNode(node11)->addNode(node12)->addNode(node13);
 
-    node20->next=node21;
-    node21->next=node22;
-    node22->next=node23;
+    Path* p3=new Path(node20);
+    p3->addNode(node21)->addNode(node22)->addNode(node23);
 
-    auto car1 = new Car(node00, 50.0);  // Car associated with Arret 1
-    auto car2 = new Car(node10, 150.0);  // Car associated with Arret 2
-    auto car3 = new Car(node20, 120.0);  // Car associated with Arret 3
+
+
+    auto car1 = new Car(p1->getHead(), 350.0);  // Car associated with Arret 1
+    auto car2 = new Car(p2->getHead(), 350.0);  // Car associated with Arret 2
+    auto car3 = new Car(p3->getHead(), 320.0);  // Car associated with Arret 3
 
     // Add Cars to the vector
     cars.push_back(car1);
     cars.push_back(car2);
     cars.push_back(car3);
 
-    /* Add Cars to corresponding Arrets
-    arret1->addCar(car1);
-    arret2->addCar(car2);
-    arret3->addCar(car3);*/
+
 }
 
 const std::vector<Arret*>& App::getArrets() const {

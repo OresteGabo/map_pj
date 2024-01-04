@@ -8,9 +8,11 @@ Car::Car(PathNode* destinationPathHead, double speed) : speed(speed), destinatio
     if (destinationPathHead) {
         position = QPointF(destinationPathHead->getArret()->x(), destinationPathHead->getArret()->y());
         nextDestinationNode = destinationPathHead->next;
+        qDebug()<<"The car initialised with path adress (" << destinationPathHead->getArret()->x()<<","<<destinationPathHead->getArret()->y()<<")";
     } else {
         // If no starting node is provided, set an initial position at (0, 0)
         position = QPointF(0, 0);
+        qDebug()<<"The car initialised with 0,0";
         nextDestinationNode = nullptr;
     }
 }

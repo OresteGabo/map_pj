@@ -4,6 +4,7 @@
 #include <QWidget>
 #include "App.h"
 #include "Car.h"
+#include "Hexagon.h"
 #include <QPushButton>
 #include <QSlider>
 
@@ -36,5 +37,6 @@ private:
     QTimer* animationTimer;
     QPushButton* simulationButton;
     QSlider* simulationSpeedSlider;
+    QVector<Hexagon> hexagons;
 };
 

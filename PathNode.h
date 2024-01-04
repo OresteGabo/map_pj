@@ -10,9 +10,10 @@
 
 class PathNode {
     friend class Car;
-    friend class App;
+    //friend class App;
+    friend class Path;
 public:
-    PathNode(Arret* arret,PathNode* n=nullptr);
+    PathNode(Arret* arret,PathNode* next=nullptr);
 
     const Arret* getArret() const;
 

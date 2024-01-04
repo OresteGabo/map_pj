@@ -97,6 +97,12 @@
 			null
 		],
 		[
+			"/home/oreste/Desktop/M1/map_pj/Hexagon.h",
+			"MU",
+			"EWIEGA46WW/moc_Hexagon.cpp",
+			null
+		],
+		[
 			"/home/oreste/Desktop/M1/map_pj/Path.h",
 			"MU",
 			"EWIEGA46WW/moc_Path.cpp",
@@ -168,6 +174,7 @@
 		[ "/home/oreste/Desktop/M1/map_pj/App.cpp", "MU", null ],
 		[ "/home/oreste/Desktop/M1/map_pj/Arret.cpp", "MU", null ],
 		[ "/home/oreste/Desktop/M1/map_pj/Car.cpp", "MU", null ],
+		[ "/home/oreste/Desktop/M1/map_pj/Hexagon.cpp", "MU", null ],
 		[ "/home/oreste/Desktop/M1/map_pj/Path.cpp", "MU", null ],
 		[ "/home/oreste/Desktop/M1/map_pj/PathNode.cpp", "MU", null ],
 		[ "/home/oreste/Desktop/M1/map_pj/Widget.cpp", "MU", null ],

@@ -23,7 +23,9 @@ add_executable(map_pj main.cpp
         PathNode.cpp
         PathNode.h
         Path.cpp
-        Path.h)
+        Path.h
+        Hexagon.cpp
+        Hexagon.h)
 target_link_libraries(map_pj
         Qt5::Core
         Qt5::Gui

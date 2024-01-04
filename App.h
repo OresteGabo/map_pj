@@ -29,6 +29,7 @@ public:
     void drawArrets(QPainter& painter) const;
     void drawCars(QPainter& painter) const;
 
+
 private:
     std::vector<Arret*> arrets;
     std::vector<Car*> cars;
