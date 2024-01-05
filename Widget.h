@@ -20,7 +20,6 @@ public:
 protected:
     void paintEvent(QPaintEvent*) override;
     void mousePressEvent(QMouseEvent* event) override;
-    void updateCarPosition();
     void updateSimulationSpeed(int speed);
     void initialiseButtons();
     void clearDebugOutput();
@@ -35,6 +34,7 @@ private slots:
     void toggleSimulation();
     void logMessage(const QString& message);
     void toggleHexagonsVisibility();
+    void toggleArretsVisibility();
 
 
 
@@ -43,15 +43,17 @@ private:
 
     int animationDuration;
     QTimer* animationTimer;
-    QPushButton* simulationButton,*toggleHexagonsButton,*clearButton,*carsInfoButton;
+    QPushButton* simulationButton,*toggleHexagonsButton,*clearButton,*carsInfoButton,*toggleArretsButton;
     QSlider* simulationSpeedSlider;
     QVector<Hexagon> hexagons;
     QPlainTextEdit* debugOutput;
     bool hexagonsVisible;
     static int counterArrets;
+    bool arretsVisible;
 
 
     void initialiseDebugOutput();
     void initialiseHexagones();
+    void initialiseSlider();
 };
 

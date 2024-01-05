@@ -362,6 +362,7 @@ map_pj_autogen/timestamp: \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qvector.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qversiontagging.h \
   /usr/include/x86_64-linux-gnu/qt5/QtGui/QPainter \
+  /usr/include/x86_64-linux-gnu/qt5/QtGui/QPixmap \
   /usr/include/x86_64-linux-gnu/qt5/QtGui/QPolygonF \
   /usr/include/x86_64-linux-gnu/qt5/QtGui/qabstracttextdocumentlayout.h \
   /usr/include/x86_64-linux-gnu/qt5/QtGui/qbrush.h \

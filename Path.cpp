@@ -61,10 +61,9 @@ void Path::draw(QPainter& painter) const {
     if(s==nullptr)return;
     while(s->next){
         painter.drawLine(s->getArret()->x(),s->getArret()->y(),s->next->getArret()->x(),s->next->getArret()->y());
+        painter.drawLine(s->getArret()->x(),s->getArret()->y()+10,s->next->getArret()->x(),s->next->getArret()->y()+10);
         s=s->next;
     }
-
-    //painter.drawEllipse(position.x(), position.y(), 20, 20);
 }
 
 void Path::logMessage(const QString &message, QPlainTextEdit *debugOutput) const {

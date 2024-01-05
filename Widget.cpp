@@ -9,7 +9,7 @@
 #include <QSlider>
 
 
-Widget::Widget(App& app, QWidget* parent) : QWidget(parent), d_app(app), animationDuration(5000),hexagonsVisible(true) {
+Widget::Widget(App& app, QWidget* parent) : QWidget(parent), d_app(app), animationDuration(5000), hexagonsVisible(true), arretsVisible(true) {
     QRect screenGeometry = QApplication::desktop()->availableGeometry();
       // Adjust the geometry as needed
 
@@ -20,33 +20,12 @@ Widget::Widget(App& app, QWidget* parent) : QWidget(parent), d_app(app), animati
     animationTimer = new QTimer(this);
     connect(animationTimer, &QTimer::timeout, this, &Widget::updateAnimation);
 
-    // Create simulation button
-    simulationButton = new QPushButton("Lancer Simulation", this);
-    simulationButton->setGeometry(10, 10, 150, 30);
-    connect(simulationButton, &QPushButton::clicked, this, &Widget::toggleSimulation);
-
     initialiseButtons();
-
-    // Create simulation speed slider
-    simulationSpeedSlider = new QSlider(Qt::Horizontal, this);
-    simulationSpeedSlider->setGeometry(180, 10, 150, 30);
-    simulationSpeedSlider->setMinimum(1);
-    simulationSpeedSlider->setMaximum(100);
-    simulationSpeedSlider->setValue(50);  // Initial speed
-    connect(simulationSpeedSlider, &QSlider::valueChanged, this, &Widget::updateSimulationSpeed);
-
-    // Set up initial animation
-    updateCarPosition();
-
-
-
+    initialiseSlider();
     initialiseHexagones();
-
 }
 
-Widget::~Widget() {
-}
-
+Widget::~Widget() {}
 void Widget::paintEvent(QPaintEvent*) {
     QPainter painter(this);
 
@@ -67,7 +46,10 @@ void Widget::paintEvent(QPaintEvent*) {
 
 void Widget::dessineApp(QPainter& painter, const App& app) {
     // Draw all Arrets in the App
-    app.drawArrets(painter);
+    if (arretsVisible) {
+        app.drawArrets(painter);
+    }
+
     app.drawCars(painter);
     app.drawPaths(painter);
 }
@@ -77,27 +59,8 @@ void Widget::mousePressEvent(QMouseEvent* event) {
     int x = event->x();
     int y = event->y();
     counterArrets++;
-    QString s=QString("new Arret(QString::number(%1), %2, %3);").arg(counterArrets).arg(event->x()).arg(event->y());
+    QString s=QString("Mouse clicked at position: (" + QString::number(x) + ", " +QString::number(y) + ")");
     qDebug()<<s;
-    //qDebug() << "Mouse clicked at position: (" << x << ", " << y << ")";
-    logMessage("Mouse clicked at position: (" + QString::number(x) + ", " +QString::number(y) + ")");
-}
-
-void Widget::updateCarPosition() {
-    // Assuming you have a function to get the cars from App
-    //const std::vector<Car*>& cars = d_app.getCars();  // Replace with your actual function to get the cars
-
-    // Update the cars' positions based on the associated Arret
-    //const Arret* associatedArret = d_app.getArrets()[0];  // Use the first Arret for demonstration
-
-    //for (Car* car : cars) {
-      //  car->setPosition(QPointF(associatedArret->x(), associatedArret->y()));
-    //}
-    //QString carInfo = QString("Car position updated. New position: (%1, %2)").arg(car.x()).arg(car.y());
-    //logMessage(carInfo);
-
-    // Redraw the widget
-    //update();*/
 }
 
 void Widget::updateAnimation() {
@@ -123,12 +86,12 @@ void Widget::toggleSimulation() {
         // If the animation is active, stop it
         animationTimer->stop();
         simulationButton->setText("Lancer Simulation");
-        logMessage("Simulation lancée");
+        logMessage("\t>Simulation arretée");
     } else {
         // If the animation is not active, start it
         animationTimer->start(16);  // Update approximately every 16 milliseconds (60 frames per second)
         simulationButton->setText("Stop Simulation");
-        logMessage("Simulation Arretée");
+        logMessage("\t>Simulation lancée");
     }
 }
 
@@ -136,8 +99,12 @@ void Widget::updateSimulationSpeed(int speed) {
     // Update the animation timer interval based on the simulation speed slider
     int newInterval = static_cast<int>(animationDuration / (speed / 50.0));
     animationTimer->setInterval(newInterval);
-}
 
+    // Set the sleep duration between iterations based on the simulation speed
+    // This will make the simulation slower as the slider moves to the right
+    int sleepDuration = static_cast<int>(animationDuration / speed);
+    animationTimer->setInterval(sleepDuration);
+}
 
 void Widget::logMessage(const QString& message) {
     // Append the message to the QPlainTextEdit
@@ -148,25 +115,9 @@ void Widget::initialiseDebugOutput() {
     debugOutput = new QPlainTextEdit(this);
     debugOutput->setGeometry(width()-420 , 20, 400, height()-100);
     debugOutput->setDisabled(true);
-    debugOutput->appendPlainText("Hello text");
-    debugOutput->appendPlainText("Hello text");
 
 
-
-    // Assuming you have a QPlainTextEdit named debugOutput
-    QTextCharFormat format;
-    format.setForeground(QColor(Qt::black)); // Set the text color to red
-    debugOutput->setCurrentCharFormat(format);
-
-// Append text with the specified color
-    debugOutput->appendPlainText("This text will appear in red.");
-
-// You can reset the format to apply the default text color
-    //format.clearForeground();
-    //debugOutput->setCurrentCharFormat(format);
-
-// Append more text with the default color
-    debugOutput->appendPlainText("This text will appear in the default color.");
+    debugOutput->setStyleSheet("background-color: rgba(0, 0, 0, 150); color: white;border:2px solid black;");
 }
 
 void Widget::initialiseHexagones() {
@@ -207,6 +158,11 @@ void Widget::toggleHexagonsVisibility() {
     update();
 }
 void Widget::initialiseButtons() {
+    // Create simulation button
+    simulationButton = new QPushButton("Lancer Simulation", this);
+    simulationButton->setGeometry(10, 10, 150, 30);
+    connect(simulationButton, &QPushButton::clicked, this, &Widget::toggleSimulation);
+
     clearButton = new QPushButton("Clear", this);
     clearButton->setGeometry(width() - 420, height() - 70, 100, 30);
     connect(clearButton, &QPushButton::clicked, this, &Widget::clearDebugOutput);
@@ -214,6 +170,11 @@ void Widget::initialiseButtons() {
     carsInfoButton = new QPushButton("Cars Info", this);
     carsInfoButton->setGeometry(width() - 310, height() - 70, 100, 30);
     connect(carsInfoButton, &QPushButton::clicked, this, &Widget::displayCarsInfo);
+
+    toggleArretsButton = new QPushButton(arretsVisible ? "Masquer les arrêts" : "Afficher les arrêts", this);
+    toggleArretsButton->setGeometry(500, 10, 150, 30);
+    connect(toggleArretsButton, &QPushButton::clicked, this, &Widget::toggleArretsVisibility);
+
 }
 
 void Widget::clearDebugOutput() {
@@ -229,4 +190,21 @@ void Widget::displayCarsInfo() {
     for (const Car* car : cars) {
         logMessage(car->toString());
     }
+}
+
+void Widget::initialiseSlider() {
+// Create simulation speed slider
+    simulationSpeedSlider = new QSlider(Qt::Horizontal, this);
+    simulationSpeedSlider->setGeometry(180, 10, 150, 30);
+    simulationSpeedSlider->setMinimum(1);
+    simulationSpeedSlider->setMaximum(100);
+    simulationSpeedSlider->setValue(50);  // Initial speed
+    connect(simulationSpeedSlider, &QSlider::valueChanged, this, &Widget::updateSimulationSpeed);
+
+}
+
+void Widget::toggleArretsVisibility() {
+    arretsVisible = !arretsVisible;
+    toggleArretsButton->setText(arretsVisible ? "Masquer les arrêts" : "Afficher les arrêts");
+    update();
 }

@@ -19,10 +19,11 @@
 #include <QPointF>
 #include <QPlainTextEdit>
 #include "PathNode.h"
+#include <QPixmap>
 
 class Car {
 public:
-    Car(PathNode* destinationPathHead = nullptr, double speed = 100.0);
+    Car(PathNode* destinationPathHead = nullptr, double speed = 100.0,const QPixmap& car=QPixmap("car.png"));
 
     void updatePosition(qreal elapsedTime);
     void draw(QPainter& painter) const;
@@ -33,6 +34,7 @@ private:
     qreal speed;
     const PathNode* destinationPathHead;
     PathNode* nextDestinationNode;
+    QPixmap carImage;
 };
 
 #endif //MAP_PJ_CAR_H
