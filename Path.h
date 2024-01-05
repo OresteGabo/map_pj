@@ -18,6 +18,7 @@ public:
     int getSize()const;
     PathNode* getHead()const;
     void draw(QPainter& painter) const;
+    void logMessage(const QString &message, QPlainTextEdit *debugOutput )const;
 private:
     PathNode* head;
 };

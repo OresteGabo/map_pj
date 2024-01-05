@@ -66,3 +66,7 @@ void Path::draw(QPainter& painter) const {
 
     //painter.drawEllipse(position.x(), position.y(), 20, 20);
 }
+
+void Path::logMessage(const QString &message, QPlainTextEdit *debugOutput) const {
+    debugOutput->appendPlainText(message);
+}

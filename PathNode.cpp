@@ -12,3 +12,7 @@ PathNode::PathNode(Arret* arret,PathNode* n) : arret(arret), next(n) {
 const Arret* PathNode::getArret() const {
     return arret;
 }
+
+void PathNode::logMessage(const QString &message, QPlainTextEdit *debugOutput) const {
+    debugOutput->appendPlainText(message);
+}

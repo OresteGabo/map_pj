@@ -48,6 +48,19 @@ void Car::draw(QPainter& painter) const {
 }
 
 
-void Car::setPosition(const QPointF &p) {
-    //position = p;
+
+void Car::logMessage(const QString &message, QPlainTextEdit *debugOutput) const {
+    debugOutput->appendPlainText(message);
 }
+
+QString Car::toString() const {
+    return QString("Car:  speed %1, position (%2,%3) next_destination %4(%5,%6)")
+    .arg(speed)
+    .arg(position.x())
+    .arg(position.y())
+            .arg(nextDestinationNode->getArret()->getName())
+            .arg(nextDestinationNode->getArret()->x())
+    .arg(nextDestinationNode->getArret()->y())
+    ;
+}
+

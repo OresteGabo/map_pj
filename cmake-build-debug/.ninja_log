@@ -1,9 +1,9 @@
 # ninja log v5
 9328	11482	1703982827910114054	QMapControl 0.9.7.9/QMapControl/CMakeFiles/QMapControl.dir/src/mapadapter.cpp.o	a831ffc7bd61b9aa
-1	12	1704405193302890909	map_pj_autogen/timestamp	c8447dd3bc638d9e
+1	8	1704422911571237718	map_pj_autogen/timestamp	c8447dd3bc638d9e
 1	1123	1703982817544398579	/home/oreste/Desktop/M1/map_pj/cmake-build-debug/QMapControl 0.9.7.9/QMapControl/QMapControl_autogen/timestamp	77a738db39f30aeb
 0	3	0	CMakeFiles/clean.additional	eed0bc8b5dafb410
-157	2030	1704404020812479952	CMakeFiles/map_pj.dir/Widget.cpp.o	3779a12b4a561f5
+176	3101	1704421687982302148	CMakeFiles/map_pj.dir/Widget.cpp.o	3779a12b4a561f5
 1123	4208	1703982820631706962	QMapControl 0.9.7.9/QMapControl/CMakeFiles/QMapControl.dir/QMapControl_autogen/mocs_compilation.cpp.o	3f39ad3703abebea
 8618	11079	1703982827506201159	QMapControl 0.9.7.9/QMapControl/CMakeFiles/QMapControl.dir/src/imagemanager.cpp.o	c1f0447b197a3592
 5622	6808	1703982823231132036	QMapControl 0.9.7.9/QMapControl/CMakeFiles/QMapControl.dir/src/gps_position.cpp.o	b1b2f177cb75c970
@@ -14,11 +14,11 @@
 12396	12588	1703982829001879587	QMapControl 0.9.7.9/QMapControl/libQMapControl.a	5ca5cddf4e4af0e4
 5786	8025	1703982824446865506	QMapControl 0.9.7.9/QMapControl/CMakeFiles/QMapControl.dir/src/invisiblepoint.cpp.o	ce4205190ccb7876
 1	1123	1703982817544398579	QMapControl 0.9.7.9/QMapControl/QMapControl_autogen/timestamp	77a738db39f30aeb
-1	12	1704405193302890909	/home/oreste/Desktop/M1/map_pj/cmake-build-debug/map_pj_autogen/mocs_compilation.cpp	c8447dd3bc638d9e
+1	8	1704422911571237718	/home/oreste/Desktop/M1/map_pj/cmake-build-debug/map_pj_autogen/mocs_compilation.cpp	c8447dd3bc638d9e
 8781	11597	1703982828022089926	QMapControl 0.9.7.9/QMapControl/CMakeFiles/QMapControl.dir/src/layer.cpp.o	ef3c36403cfdec8d
 1124	3992	1703982820415755031	QMapControl 0.9.7.9/QMapControl/CMakeFiles/QMapControl.dir/src/layermanager.cpp.o	9cebfaa50cf86ee8
-1	12	1704405193302890909	/home/oreste/Desktop/M1/map_pj/cmake-build-debug/map_pj_autogen/timestamp	c8447dd3bc638d9e
-1140	1530	1704405194814864362	map_pj	ffe95c99735e16e
+1	8	1704422911571237718	/home/oreste/Desktop/M1/map_pj/cmake-build-debug/map_pj_autogen/timestamp	c8447dd3bc638d9e
+1743	2137	1704422913695240121	map_pj	ffe95c99735e16e
 0	42	1704392540516278393	build.ninja	3316f616d099b840
 7960	10457	1703982826878336686	QMapControl 0.9.7.9/QMapControl/CMakeFiles/QMapControl.dir/src/fixedimageoverlay.cpp.o	de8115ca23801e7
 8025	9968	1703982826390442379	QMapControl 0.9.7.9/QMapControl/CMakeFiles/QMapControl.dir/src/googleapimapadapter.cpp.o	41ae8661b60aca2e
@@ -28,36 +28,78 @@
 1960	3373	1704399934968625410	CMakeFiles/map_pj.dir/Hexagon.cpp.o	ecdb5e72745cfb9
 1124	3195	1703982819607935244	QMapControl 0.9.7.9/QMapControl/CMakeFiles/QMapControl.dir/src/curve.cpp.o	b96d05b4154860a5
 3195	5976	1703982822399315301	QMapControl 0.9.7.9/QMapControl/CMakeFiles/QMapControl.dir/src/imagepoint.cpp.o	9baf5969912ffc18
-13	1140	1704405194430871109	CMakeFiles/map_pj.dir/Arret.cpp.o	c022b51adafb38e3
+176	2762	1704421687642301664	CMakeFiles/map_pj.dir/Arret.cpp.o	c022b51adafb38e3
 6808	8618	1703982825042735283	QMapControl 0.9.7.9/QMapControl/CMakeFiles/QMapControl.dir/src/tilemapadapter.cpp.o	58c077ad6f493d60
 8694	11143	1703982827570187361	QMapControl 0.9.7.9/QMapControl/CMakeFiles/QMapControl.dir/src/wmsmapadapter.cpp.o	bf3c8720038e5eec
-157	2477	1704404021256455972	CMakeFiles/map_pj.dir/App.cpp.o	e58f6b211f4a2895
+9	1743	1704422913303239678	CMakeFiles/map_pj.dir/App.cpp.o	e58f6b211f4a2895
 3769	6060	1703982822483296775	QMapControl 0.9.7.9/QMapControl/CMakeFiles/QMapControl.dir/src/bingapimapadapter.cpp.o	d674f70bdd837984
 6074	8694	1703982825118718748	QMapControl 0.9.7.9/QMapControl/CMakeFiles/QMapControl.dir/src/maplayer.cpp.o	5526d08843c0abb4
 3368	6073	1703982822495294129	QMapControl 0.9.7.9/QMapControl/CMakeFiles/QMapControl.dir/src/mapcontrol.cpp.o	69ed8d677fdcd3cf
 3346	5621	1703982822043393813	QMapControl 0.9.7.9/QMapControl/CMakeFiles/QMapControl.dir/src/openaerialmapadapter.cpp.o	35c82f2d9da995c8
 3	6	0	clean	f17fe4045e498119
-1	12	1704405193302890909	map_pj_autogen/mocs_compilation.cpp	c8447dd3bc638d9e
+1	8	1704422911571237718	map_pj_autogen/mocs_compilation.cpp	c8447dd3bc638d9e
 6061	8781	1703982825202700472	QMapControl 0.9.7.9/QMapControl/CMakeFiles/QMapControl.dir/src/linestring.cpp.o	5f702ff0dae03acf
 184	395	1704344317071107964	CMakeFiles/map_pj.dir/Position.cpp.o	fee26b15c3f4406c
 9968	11959	1703982828386011800	QMapControl 0.9.7.9/QMapControl/CMakeFiles/QMapControl.dir/src/mapnetwork.cpp.o	71fa2c5fd640887a
-157	1888	1704404020668487735	CMakeFiles/map_pj.dir/map_pj_autogen/mocs_compilation.cpp.o	70968653f9c460f1
-10	1290	1704404286684755259	CMakeFiles/map_pj.dir/Car.cpp.o	5ea4ec021b25abe
+175	3051	1704421687934302080	CMakeFiles/map_pj.dir/map_pj_autogen/mocs_compilation.cpp.o	70968653f9c460f1
+176	3071	1704421687950302103	CMakeFiles/map_pj.dir/Car.cpp.o	5ea4ec021b25abe
 1124	3346	1703982819771898582	QMapControl 0.9.7.9/QMapControl/CMakeFiles/QMapControl.dir/src/geometry.cpp.o	eb1f4ee1921ad300
 1124	3368	1703982819791894111	QMapControl 0.9.7.9/QMapControl/CMakeFiles/QMapControl.dir/src/googlemapadapter.cpp.o	96734b7eb3f49c71
-1727	2962	1704399934556624994	CMakeFiles/map_pj.dir/PathNode.cpp.o	866034e0cd69d572
-157	2457	1704404021236457052	CMakeFiles/map_pj.dir/main.cpp.o	cc526e235b2b8c4a
+2762	4279	1704421689162303825	CMakeFiles/map_pj.dir/PathNode.cpp.o	866034e0cd69d572
+175	3075	1704421687958302114	CMakeFiles/map_pj.dir/main.cpp.o	cc526e235b2b8c4a
 4209	6978	1703982823403094274	QMapControl 0.9.7.9/QMapControl/CMakeFiles/QMapControl.dir/src/geometrylayer.cpp.o	52bb17448c29fe13
-10	1085	1704404204779419428	CMakeFiles/map_pj.dir/Path.cpp.o	8184b5cb69c3f0e7
-1	9	1704405234802144383	map_pj_autogen/timestamp	c8447dd3bc638d9e
-1	9	1704405234802144383	map_pj_autogen/mocs_compilation.cpp	c8447dd3bc638d9e
-1	9	1704405234802144383	/home/oreste/Desktop/M1/map_pj/cmake-build-debug/map_pj_autogen/timestamp	c8447dd3bc638d9e
-1	9	1704405234802144383	/home/oreste/Desktop/M1/map_pj/cmake-build-debug/map_pj_autogen/mocs_compilation.cpp	c8447dd3bc638d9e
-9	1103	1704405235894124252	CMakeFiles/map_pj.dir/Arret.cpp.o	c022b51adafb38e3
-1103	1492	1704405236282117092	map_pj	ffe95c99735e16e
-2	9	1704405253817790384	map_pj_autogen/timestamp	c8447dd3bc638d9e
-2	9	1704405253817790384	map_pj_autogen/mocs_compilation.cpp	c8447dd3bc638d9e
-2	9	1704405253817790384	/home/oreste/Desktop/M1/map_pj/cmake-build-debug/map_pj_autogen/timestamp	c8447dd3bc638d9e
-2	9	1704405253817790384	/home/oreste/Desktop/M1/map_pj/cmake-build-debug/map_pj_autogen/mocs_compilation.cpp	c8447dd3bc638d9e
-10	1067	1704405254873770514	CMakeFiles/map_pj.dir/Arret.cpp.o	c022b51adafb38e3
-1068	1459	1704405255261763208	map_pj	ffe95c99735e16e
+3051	4507	1704421689390304149	CMakeFiles/map_pj.dir/Path.cpp.o	8184b5cb69c3f0e7
+1	9	1704423392023629460	map_pj_autogen/timestamp	c8447dd3bc638d9e
+1	9	1704423392023629460	map_pj_autogen/mocs_compilation.cpp	c8447dd3bc638d9e
+1	9	1704423392023629460	/home/oreste/Desktop/M1/map_pj/cmake-build-debug/map_pj_autogen/timestamp	c8447dd3bc638d9e
+1	9	1704423392023629460	/home/oreste/Desktop/M1/map_pj/cmake-build-debug/map_pj_autogen/mocs_compilation.cpp	c8447dd3bc638d9e
+9	1710	1704423393723630450	CMakeFiles/map_pj.dir/App.cpp.o	e58f6b211f4a2895
+1710	2096	1704423394107630673	map_pj	ffe95c99735e16e
+1	8	1704423512411694952	map_pj_autogen/timestamp	c8447dd3bc638d9e
+1	8	1704423512411694952	map_pj_autogen/mocs_compilation.cpp	c8447dd3bc638d9e
+1	8	1704423512411694952	/home/oreste/Desktop/M1/map_pj/cmake-build-debug/map_pj_autogen/timestamp	c8447dd3bc638d9e
+1	8	1704423512411694952	/home/oreste/Desktop/M1/map_pj/cmake-build-debug/map_pj_autogen/mocs_compilation.cpp	c8447dd3bc638d9e
+9	1721	1704423514123695821	CMakeFiles/map_pj.dir/App.cpp.o	e58f6b211f4a2895
+1721	2107	1704423514507696016	map_pj	ffe95c99735e16e
+1	9	1704424211979961693	map_pj_autogen/timestamp	c8447dd3bc638d9e
+1	9	1704424211979961693	map_pj_autogen/mocs_compilation.cpp	c8447dd3bc638d9e
+1	9	1704424211979961693	/home/oreste/Desktop/M1/map_pj/cmake-build-debug/map_pj_autogen/timestamp	c8447dd3bc638d9e
+1	9	1704424211979961693	/home/oreste/Desktop/M1/map_pj/cmake-build-debug/map_pj_autogen/mocs_compilation.cpp	c8447dd3bc638d9e
+9	1998	1704424213967962290	CMakeFiles/map_pj.dir/App.cpp.o	e58f6b211f4a2895
+1998	2397	1704424214359962407	map_pj	ffe95c99735e16e
+2	9	1704424245747971754	map_pj_autogen/timestamp	c8447dd3bc638d9e
+2	9	1704424245747971754	map_pj_autogen/mocs_compilation.cpp	c8447dd3bc638d9e
+2	9	1704424245747971754	/home/oreste/Desktop/M1/map_pj/cmake-build-debug/map_pj_autogen/timestamp	c8447dd3bc638d9e
+2	9	1704424245747971754	/home/oreste/Desktop/M1/map_pj/cmake-build-debug/map_pj_autogen/mocs_compilation.cpp	c8447dd3bc638d9e
+10	2441	1704424248175972471	CMakeFiles/map_pj.dir/App.cpp.o	e58f6b211f4a2895
+2441	2819	1704424248551972582	map_pj	ffe95c99735e16e
+1	12	1704424513460046966	map_pj_autogen/timestamp	c8447dd3bc638d9e
+1	12	1704424513460046966	map_pj_autogen/mocs_compilation.cpp	c8447dd3bc638d9e
+1	12	1704424513460046966	/home/oreste/Desktop/M1/map_pj/cmake-build-debug/map_pj_autogen/timestamp	c8447dd3bc638d9e
+1	12	1704424513460046966	/home/oreste/Desktop/M1/map_pj/cmake-build-debug/map_pj_autogen/mocs_compilation.cpp	c8447dd3bc638d9e
+13	2510	1704424515956047636	CMakeFiles/map_pj.dir/App.cpp.o	e58f6b211f4a2895
+2510	2913	1704424516356047743	map_pj	ffe95c99735e16e
+1	9	1704425083684841522	map_pj_autogen/timestamp	c8447dd3bc638d9e
+1	9	1704425083684841522	map_pj_autogen/mocs_compilation.cpp	c8447dd3bc638d9e
+1	9	1704425083684841522	/home/oreste/Desktop/M1/map_pj/cmake-build-debug/map_pj_autogen/timestamp	c8447dd3bc638d9e
+1	9	1704425083684841522	/home/oreste/Desktop/M1/map_pj/cmake-build-debug/map_pj_autogen/mocs_compilation.cpp	c8447dd3bc638d9e
+9	1725	1704425085396828692	CMakeFiles/map_pj.dir/App.cpp.o	e58f6b211f4a2895
+1725	2115	1704425085784825790	map_pj	ffe95c99735e16e
+1	9	1704425150420366807	map_pj_autogen/timestamp	c8447dd3bc638d9e
+1	9	1704425150420366807	map_pj_autogen/mocs_compilation.cpp	c8447dd3bc638d9e
+1	9	1704425150420366807	/home/oreste/Desktop/M1/map_pj/cmake-build-debug/map_pj_autogen/timestamp	c8447dd3bc638d9e
+1	9	1704425150420366807	/home/oreste/Desktop/M1/map_pj/cmake-build-debug/map_pj_autogen/mocs_compilation.cpp	c8447dd3bc638d9e
+9	1781	1704425152188354909	CMakeFiles/map_pj.dir/App.cpp.o	e58f6b211f4a2895
+1781	2185	1704425152592352195	map_pj	ffe95c99735e16e
+1	23	1704425161280294249	map_pj_autogen/timestamp	c8447dd3bc638d9e
+1	23	1704425161280294249	map_pj_autogen/mocs_compilation.cpp	c8447dd3bc638d9e
+1	23	1704425161280294249	/home/oreste/Desktop/M1/map_pj/cmake-build-debug/map_pj_autogen/timestamp	c8447dd3bc638d9e
+1	23	1704425161280294249	/home/oreste/Desktop/M1/map_pj/cmake-build-debug/map_pj_autogen/mocs_compilation.cpp	c8447dd3bc638d9e
+24	1856	1704425163112282130	CMakeFiles/map_pj.dir/App.cpp.o	e58f6b211f4a2895
+1856	2251	1704425163504279543	map_pj	ffe95c99735e16e
+1	9	1704425736537719111	map_pj_autogen/timestamp	c8447dd3bc638d9e
+1	9	1704425736537719111	map_pj_autogen/mocs_compilation.cpp	c8447dd3bc638d9e
+1	9	1704425736537719111	/home/oreste/Desktop/M1/map_pj/cmake-build-debug/map_pj_autogen/timestamp	c8447dd3bc638d9e
+1	9	1704425736537719111	/home/oreste/Desktop/M1/map_pj/cmake-build-debug/map_pj_autogen/mocs_compilation.cpp	c8447dd3bc638d9e
+9	1695	1704425738221714073	CMakeFiles/map_pj.dir/App.cpp.o	e58f6b211f4a2895
+1695	2086	1704425738609712913	map_pj	ffe95c99735e16e

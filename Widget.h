@@ -7,6 +7,7 @@
 #include "Hexagon.h"
 #include <QPushButton>
 #include <QSlider>
+#include <QPlainTextEdit>
 
 class Widget : public QWidget {
 Q_OBJECT
@@ -21,13 +22,20 @@ protected:
     void mousePressEvent(QMouseEvent* event) override;
     void updateCarPosition();
     void updateSimulationSpeed(int speed);
+    void initialiseButtons();
+    void clearDebugOutput();
+    void displayCarsInfo();
+
+
+private:
+    void dessineApp(QPainter& painter, const App& app);
 
 private slots:
     void updateAnimation();
     void toggleSimulation();
+    void logMessage(const QString& message);
+    void toggleHexagonsVisibility();
 
-private:
-    void dessineApp(QPainter& painter, const App& app);
 
 
 private:
@@ -35,8 +43,15 @@ private:
 
     int animationDuration;
     QTimer* animationTimer;
-    QPushButton* simulationButton;
+    QPushButton* simulationButton,*toggleHexagonsButton,*clearButton,*carsInfoButton;
     QSlider* simulationSpeedSlider;
     QVector<Hexagon> hexagons;
+    QPlainTextEdit* debugOutput;
+    bool hexagonsVisible;
+    static int counterArrets;
+
+
+    void initialiseDebugOutput();
+    void initialiseHexagones();
 };
 

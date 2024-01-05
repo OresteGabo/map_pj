@@ -30,6 +30,7 @@ public:
     void drawArrets(QPainter& painter) const;
     void drawCars(QPainter& painter) const;
     void drawPaths(QPainter& painter) const;
+    void logMessage(const QString &message, QPlainTextEdit *debugOutput )const;
 
 
 private:

@@ -17,6 +17,7 @@
 #include <qdebug.h>
 #include <QPainter>
 #include <QPointF>
+#include <QPlainTextEdit>
 #include "PathNode.h"
 
 class Car {
@@ -25,8 +26,8 @@ public:
 
     void updatePosition(qreal elapsedTime);
     void draw(QPainter& painter) const;
-    void setPosition(const QPointF&);
-
+    void logMessage(const QString &message, QPlainTextEdit *debugOutput )const;
+    QString toString()const;
 private:
     QPointF position;
     qreal speed;

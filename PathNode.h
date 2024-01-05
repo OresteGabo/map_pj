@@ -16,6 +16,7 @@ public:
     PathNode(Arret* arret,PathNode* next=nullptr);
 
     const Arret* getArret() const;
+    void logMessage(const QString &message, QPlainTextEdit *debugOutput )const;
 
 private:
     Arret* arret;

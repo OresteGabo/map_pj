@@ -34,3 +34,10 @@ void Arret::draw(QPainter& painter) const {
     painter.drawText(roundedRect, Qt::AlignCenter, id);
     painter.setPen(Qt::black);
 }
+void Arret::logMessage(const QString &message, QPlainTextEdit *debugOutput )const {
+    debugOutput->appendPlainText(message);
+}
+
+void Arret::setName(const QString &name) {
+    id=name;
+}
