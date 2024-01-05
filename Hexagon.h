@@ -1,7 +1,4 @@
-//
-// Created by oreste on 04/01/24.
-//
-
+// Hexagon.h
 #ifndef MAP_PJ_HEXAGON_H
 #define MAP_PJ_HEXAGON_H
 
@@ -9,16 +6,16 @@
 #include <QPolygonF>
 #include <QPainter>
 
-class Hexagon {
+class Hexagon : public QPolygonF {
 public:
-    Hexagon(const QPointF& center, qreal size);
+    Hexagon(const QPointF& center, qreal size, bool isCarInside = false);
 
     void draw(QPainter& painter) const;
+    bool isPointInside(const QPointF& point) const;
+    void setIsCarInside(bool isCarInside);
 
 private:
-    QPointF center;
-    qreal size;
+    bool isCarInside;
 };
 
-
-#endif //MAP_PJ_HEXAGON_H
+#endif // MAP_PJ_HEXAGON_H
