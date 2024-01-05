@@ -34,6 +34,21 @@ void Widget::paintEvent(QPaintEvent*) {
     painter.drawPixmap(rect(), backgroundImage, backgroundImage.rect());
 
     if (hexagonsVisible) {
+        for (Hexagon& hexagon : hexagons) {
+            hexagon.setIsCarInside(false);  // Reset the flag for each hexagon
+
+            for (int x = 0; x < d_app.getCars().size(); x++) {
+                if (hexagon.isPointInside(d_app.getCars()[x]->getPosition())) {
+                    hexagon.setIsCarInside(true);
+                    break;  // No need to check other cars once one is inside
+                }
+            }
+            hexagon.draw(painter);
+        }
+
+    }
+
+    if (hexagonsVisible) {
         for (const Hexagon& hexagon : hexagons) {
             hexagon.draw(painter);
         }
