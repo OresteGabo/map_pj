@@ -29,6 +29,7 @@ public:
     void draw(QPainter& painter) const;
     void logMessage(const QString &message, QPlainTextEdit *debugOutput )const;
     QString toString()const;
+    QPointF getPosition()const;
 private:
     QPointF position;
     qreal speed;

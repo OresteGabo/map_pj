@@ -67,3 +67,7 @@ QString Car::toString() const {
     ;
 }
 
+QPointF Car::getPosition() const {
+    return position;
+}
+
