@@ -3,10 +3,11 @@
 #include <QBrush>
 #include <QtMath>
 
-Car::Car(PathNode* destinationPathHead, double speed,const QPixmap& car) :
+Car::Car(PathNode* destinationPathHead, double speed,const QPixmap& car,double frequence) :
 speed(speed), destinationPathHead(destinationPathHead),
 position(destinationPathHead->getArret()->toPoint()),
-carImage(car)
+carImage(car),
+frequence(frequence)
 {
     carImage = carImage.scaledToWidth(30);
     // Set the initial position based on the starting destination node
@@ -57,13 +58,14 @@ void Car::logMessage(const QString &message, QPlainTextEdit *debugOutput) const 
 }
 
 QString Car::toString() const {
-    return QString("Car:  speed %1, position (%2,%3) next_destination %4(%5,%6)")
+    return QString("Car info:\n\tspeed %1,\n\tposition (%2,%3) \n\tnext_destination %4(%5,%6)\n\tfrequence %7")
     .arg(speed)
     .arg(position.x())
     .arg(position.y())
-            .arg(nextDestinationNode->getArret()->getName())
-            .arg(nextDestinationNode->getArret()->x())
+    .arg(nextDestinationNode->getArret()->getName())
+    .arg(nextDestinationNode->getArret()->x())
     .arg(nextDestinationNode->getArret()->y())
+    .arg(frequence)
     ;
 }
 
