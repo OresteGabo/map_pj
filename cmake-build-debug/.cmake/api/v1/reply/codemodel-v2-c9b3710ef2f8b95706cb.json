@@ -1,0 +1,78 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-Debug-f5ebdc15457944623624.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.26"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "map_pj",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "map_pj::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-map_pj-Debug-3e731ef995a46abad7a5.json",
+					"name" : "map_pj",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "map_pj_autogen::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-map_pj_autogen-Debug-15ffff8df7e3bbdef7cf.json",
+					"name" : "map_pj_autogen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "map_pj_autogen_timestamp_deps::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-map_pj_autogen_timestamp_deps-Debug-5326896451d4a8d43686.json",
+					"name" : "map_pj_autogen_timestamp_deps",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/oreste/Desktop/M1/map_pj/cmake-build-debug",
+		"source" : "/home/oreste/Desktop/M1/map_pj"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 5
+	}
+}

@@ -17,13 +17,9 @@ int main(int argc, char *argv[]) {
 #include<iostream>
 #include<vector>
 using std::vector;
+
 int main(int argc, char *argv[]) {
     QApplication qApplication(argc, argv);  // Create the QApplication instance
-
-
-
-
-
     auto app= App();
     Widget w(app);
     w.show();
@@ -31,3 +27,10 @@ int main(int argc, char *argv[]) {
     return qApplication.exec();  // Start the application event loop
 
 }
+/*
+int main(int argc, char *argv[]) {
+    QApplication a(argc, argv);
+    MapWidget mapWidget;
+    mapWidget.show();
+    return a.exec();
+}*/

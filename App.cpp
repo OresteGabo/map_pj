@@ -200,7 +200,7 @@ void App::initialize() {
     p1->addNode(nodes[36])->addNode(nodes[35])->addNode(nodes[34])->addNode(nodes[33])->addNode(nodes[62])->addNode(nodes[60])->addNode(nodes[57])->addNode(nodes[54])->addNode(nodes[106])->addNode(nodes[105])->addNode(nodes[103])->addNode(nodes[104]);
 
     Path* p2=new Path(nodes[1]);
-    p2->addNode(nodes[0])->addNode(nodes[2])->addNode(nodes[3])->addNode(nodes[5])->addNode(nodes[7])->addNode(nodes[11]);//->addNode(nodes[14])->addNode(nodes[17])->addNode(nodes[19])->addNode(nodes[16])->addNode(nodes[18])->addNode(nodes[21])->addNode(nodes[25])->addNode(nodes[26])->addNode(nodes[27])->addNode(nodes[32])->addNode(nodes[33])->addNode(nodes[63]);
+    p2->addNode(nodes[0])->addNode(nodes[2])->addNode(nodes[3])->addNode(nodes[5])->addNode(nodes[7])->addNode(nodes[11]);
 
     Path* p3=new Path(nodes[145]);
     p3->addNode(nodes[172])->addNode(nodes[157])->addNode(nodes[138])->addNode(nodes[136])->addNode(nodes[137])->addNode(nodes[135])->addNode(nodes[134])->addNode(nodes[159])->addNode(nodes[132]);
@@ -210,14 +210,16 @@ void App::initialize() {
     paths.push_back(p3);
 
 
-    auto car1 = new Car(p1->getHead(), 350.0);  // Car associated with Arret 1
-    auto car2 = new Car(p2->getHead(), 350.0);  // Car associated with Arret 2
-    auto car3 = new Car(p3->getHead(), 320.0);  // Car associated with Arret 3
+    auto car1 = new Car(1,p1->getHead(), 350.0);  // Car associated with Arret 1
+    auto car2 = new Car(2,p2->getHead(), 350.0);  // Car associated with Arret 2
+    auto car3 = new Car(3,p3->getHead(), 320.0);  // Car associated with Arret 3
 
     // Add Cars to the vector
     cars.push_back(car1);
     cars.push_back(car2);
     cars.push_back(car3);
+
+    CarConnectionManager::instance();
 
 }
 
@@ -292,9 +294,19 @@ void App::initialiseHexagones() {
             hexagons.push_back(hexagon);
         }
     }
-
-    //toggleHexagonsButton = new QPushButton(!hexagonsVisible?"Afficher les mailles":"Masquer les mailles", this);
-    //toggleHexagonsButton->setGeometry(350, 10, 150, 30);
-    //connect(toggleHexagonsButton, &QPushButton::clicked, this, &Widget::toggleHexagonsVisibility);
-
 }
+void App::updateCarPositions(qreal elapsedTime) {
+    for (Car* car : getCars()) {
+        car->updatePosition(elapsedTime);
+    }
+}
+
+void App::dessineApp(QPainter& painter,bool arretsVisible) {
+    if (arretsVisible) {
+        drawArrets(painter);
+    }
+
+    drawCars(painter);
+    drawPaths(painter);
+}
+

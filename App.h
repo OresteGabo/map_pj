@@ -19,6 +19,7 @@
 #include "Path.h"
 #include "Hexagon.h"
 #include <QRandomGenerator>
+#include "CarConnectionManager.h"
 
 class App {
 public:
@@ -35,6 +36,9 @@ public:
     void updateHexagons();
     void drawHexagons(QPainter&)const;
     void initialiseHexagones();
+
+    void updateCarPositions(qreal elapsedTime);
+    void dessineApp(QPainter& painter,bool arretsVisible);
 
 
 private:

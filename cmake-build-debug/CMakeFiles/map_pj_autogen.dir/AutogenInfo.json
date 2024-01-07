@@ -71,7 +71,12 @@
 		"/usr/lib/x86_64-linux-gnu/cmake/Qt5Widgets/Qt5WidgetsConfig.cmake",
 		"/usr/lib/x86_64-linux-gnu/cmake/Qt5Widgets/Qt5WidgetsConfigExtras.cmake",
 		"/usr/lib/x86_64-linux-gnu/cmake/Qt5Widgets/Qt5WidgetsMacros.cmake",
-		"/home/oreste/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeParseArguments.cmake"
+		"/home/oreste/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeParseArguments.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt5Network/Qt5NetworkConfigVersion.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt5Network/Qt5NetworkConfig.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt5Network/Qt5Network_QConnmanEnginePlugin.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt5Network/Qt5Network_QGenericEnginePlugin.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt5Network/Qt5Network_QNetworkManagerEnginePlugin.cmake"
 	],
 	"CMAKE_SOURCE_DIR" : "/home/oreste/Desktop/M1/map_pj",
 	"DEP_FILE" : "/home/oreste/Desktop/M1/map_pj/cmake-build-debug/map_pj_autogen/deps",
@@ -97,9 +102,21 @@
 			null
 		],
 		[
+			"/home/oreste/Desktop/M1/map_pj/CarConnectionManager.h",
+			"MU",
+			"EWIEGA46WW/moc_CarConnectionManager.cpp",
+			null
+		],
+		[
 			"/home/oreste/Desktop/M1/map_pj/Hexagon.h",
 			"MU",
 			"EWIEGA46WW/moc_Hexagon.cpp",
+			null
+		],
+		[
+			"/home/oreste/Desktop/M1/map_pj/MapWidget.h",
+			"MU",
+			"EWIEGA46WW/moc_MapWidget.cpp",
 			null
 		],
 		[
@@ -124,7 +141,7 @@
 	"HEADER_EXTENSIONS" : [ "h", "hh", "h++", "hm", "hpp", "hxx", "in", "txx" ],
 	"INCLUDE_DIR" : "/home/oreste/Desktop/M1/map_pj/cmake-build-debug/map_pj_autogen/include",
 	"MOC_COMPILATION_FILE" : "/home/oreste/Desktop/M1/map_pj/cmake-build-debug/map_pj_autogen/mocs_compilation.cpp",
-	"MOC_DEFINITIONS" : [ "QT_CORE_LIB", "QT_GUI_LIB", "QT_WIDGETS_LIB" ],
+	"MOC_DEFINITIONS" : [ "QT_CORE_LIB", "QT_GUI_LIB", "QT_NETWORK_LIB", "QT_WIDGETS_LIB" ],
 	"MOC_DEPEND_FILTERS" : 
 	[
 		[
@@ -139,6 +156,7 @@
 		"/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++",
 		"/usr/include/x86_64-linux-gnu/qt5/QtGui",
 		"/usr/include/x86_64-linux-gnu/qt5/QtWidgets",
+		"/usr/include/x86_64-linux-gnu/qt5/QtNetwork",
 		"/usr/include/c++/11",
 		"/usr/include/x86_64-linux-gnu/c++/11",
 		"/usr/include/c++/11/backward",
@@ -174,7 +192,9 @@
 		[ "/home/oreste/Desktop/M1/map_pj/App.cpp", "MU", null ],
 		[ "/home/oreste/Desktop/M1/map_pj/Arret.cpp", "MU", null ],
 		[ "/home/oreste/Desktop/M1/map_pj/Car.cpp", "MU", null ],
+		[ "/home/oreste/Desktop/M1/map_pj/CarConnectionManager.cpp", "MU", null ],
 		[ "/home/oreste/Desktop/M1/map_pj/Hexagon.cpp", "MU", null ],
+		[ "/home/oreste/Desktop/M1/map_pj/MapWidget.cpp", "MU", null ],
 		[ "/home/oreste/Desktop/M1/map_pj/Path.cpp", "MU", null ],
 		[ "/home/oreste/Desktop/M1/map_pj/PathNode.cpp", "MU", null ],
 		[ "/home/oreste/Desktop/M1/map_pj/Widget.cpp", "MU", null ],

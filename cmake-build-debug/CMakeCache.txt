@@ -248,6 +248,12 @@ Qt5Network_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/Qt5Network
 //The directory containing a CMake configuration file for Qt5QMapControl.
 Qt5QMapControl_DIR:PATH=Qt5QMapControl_DIR-NOTFOUND
 
+//The directory containing a CMake configuration file for Qt5Qml.
+Qt5Qml_DIR:PATH=Qt5Qml_DIR-NOTFOUND
+
+//The directory containing a CMake configuration file for Qt5Quick.
+Qt5Quick_DIR:PATH=Qt5Quick_DIR-NOTFOUND
+
 //The directory containing a CMake configuration file for Qt5Widgets.
 Qt5Widgets_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/Qt5Widgets
 
