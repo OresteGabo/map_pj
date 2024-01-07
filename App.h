@@ -19,7 +19,6 @@
 #include "Path.h"
 #include "Hexagon.h"
 #include <QRandomGenerator>
-#include "CarConnectionManager.h"
 
 class App {
 public:
@@ -27,8 +26,8 @@ public:
 
     void initialize(); // Initialize Arrets and Cars
 
-    const std::vector<Arret*>& getArrets() const;
-    const std::vector<Car*>& getCars() const;
+    const QVector<Arret*>& getArrets() const;
+    const QVector<Car*>& getCars() const;
     void drawArrets(QPainter& painter) const;
     void drawCars(QPainter& painter) const;
     void drawPaths(QPainter& painter) const;
@@ -39,13 +38,16 @@ public:
 
     void updateCarPositions(qreal elapsedTime);
     void dessineApp(QPainter& painter,bool arretsVisible);
+    void updateConnectedCars();
+
 
 
 private:
-    std::vector<Arret*> arrets;
-    std::vector<Car*> cars;
-    std::vector<Path*>paths;
+    QVector<Arret*> arrets;
+    QVector<Car*> cars;
+    QVector<Path*>paths;
     QVector<Hexagon> hexagons;
+
 };
 
 

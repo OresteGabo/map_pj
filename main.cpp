@@ -1,14 +1,4 @@
-/*#include <QApplication>
-#include <QPushButton>
-//#include <QMapControl/mapcontrol.h>
 
-int main(int argc, char *argv[]) {
-    QApplication a(argc, argv);
-    QPushButton button("Hello world!", nullptr);
-    button.resize(200, 100);
-    button.show();
-    return QApplication::exec();
-}*/
 
 #include <QApplication>
 #include <QPushButton>
@@ -27,10 +17,3 @@ int main(int argc, char *argv[]) {
     return qApplication.exec();  // Start the application event loop
 
 }
-/*
-int main(int argc, char *argv[]) {
-    QApplication a(argc, argv);
-    MapWidget mapWidget;
-    mapWidget.show();
-    return a.exec();
-}*/

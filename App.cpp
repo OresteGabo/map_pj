@@ -219,15 +219,15 @@ void App::initialize() {
     cars.push_back(car2);
     cars.push_back(car3);
 
-    CarConnectionManager::instance();
+    updateConnectedCars();
 
 }
 
-const std::vector<Arret*>& App::getArrets() const {
+const QVector<Arret*>& App::getArrets() const {
     return arrets;
 }
 
-const std::vector<Car*>& App::getCars() const {
+const QVector<Car*>& App::getCars() const {
     return cars;
 }
 
@@ -265,7 +265,6 @@ void App::updateHexagons() {
                 break;  // No need to check other cars once one is inside
             }
         }
-        //hexagon.draw(painter);
     }
 
 }
@@ -297,8 +296,9 @@ void App::initialiseHexagones() {
 }
 void App::updateCarPositions(qreal elapsedTime) {
     for (Car* car : getCars()) {
-        car->updatePosition(elapsedTime);
+        car->updatePosition(elapsedTime,cars);
     }
+    updateConnectedCars();
 }
 
 void App::dessineApp(QPainter& painter,bool arretsVisible) {
@@ -309,4 +309,12 @@ void App::dessineApp(QPainter& painter,bool arretsVisible) {
     drawCars(painter);
     drawPaths(painter);
 }
+
+void App::updateConnectedCars() {
+    for(Car* car:getCars()){
+        car->updateConnectedCars(getCars());
+        qDebug()<<"Connected cars size is "<<car->getConnectedCars().size();
+    }
+}
+
 

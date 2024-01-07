@@ -15,24 +15,29 @@
 #include <QPixmap>
 #include<QRandomGenerator>
 #include<cmath>
-#include "CarConnectionManager.h"
 class PathNode;
-class CarConnectionManager;
 
 class Car {
 public:
     Car(int id=0,PathNode* destinationPathHead = nullptr,
         double speed = 100.0,
         const QPixmap& car=QPixmap("car.png"),
-        double frequence=QRandomGenerator::global()->bounded(10, 100)
+        double frequence=QRandomGenerator::global()->bounded(10, 1000)
                 );
 
-    void updatePosition(qreal elapsedTime);
+    void updatePosition(qreal elapsedTime,QVector<Car*> allCars);
     void draw(QPainter& painter) const;
     void logMessage(const QString &message, QPlainTextEdit *debugOutput )const;
     QString toString()const;
     QPointF getPosition()const;
-    void checkForConnections();
+    void updateConnectedCars(QVector<Car*> allCars);
+    bool connectedTo(const Car*)const ;
+    int getRadius()const;
+
+    double getFrequence() const;
+
+
+    int getId() const;
 
 private:
     QPointF position;
@@ -42,9 +47,12 @@ private:
     QPixmap carImage;
     double frequence;
     QVector<Car*> connectedCars;
+public:
+    const QVector<Car *> &getConnectedCars() const;
+
+private:
     int id;
 public:
-    bool checkProximity(const Car* otherCar) const;
 };
 
 #endif //MAP_PJ_CAR_H

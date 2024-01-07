@@ -102,12 +102,6 @@
 			null
 		],
 		[
-			"/home/oreste/Desktop/M1/map_pj/CarConnectionManager.h",
-			"MU",
-			"EWIEGA46WW/moc_CarConnectionManager.cpp",
-			null
-		],
-		[
 			"/home/oreste/Desktop/M1/map_pj/Hexagon.h",
 			"MU",
 			"EWIEGA46WW/moc_Hexagon.cpp",
@@ -192,7 +186,6 @@
 		[ "/home/oreste/Desktop/M1/map_pj/App.cpp", "MU", null ],
 		[ "/home/oreste/Desktop/M1/map_pj/Arret.cpp", "MU", null ],
 		[ "/home/oreste/Desktop/M1/map_pj/Car.cpp", "MU", null ],
-		[ "/home/oreste/Desktop/M1/map_pj/CarConnectionManager.cpp", "MU", null ],
 		[ "/home/oreste/Desktop/M1/map_pj/Hexagon.cpp", "MU", null ],
 		[ "/home/oreste/Desktop/M1/map_pj/MapWidget.cpp", "MU", null ],
 		[ "/home/oreste/Desktop/M1/map_pj/Path.cpp", "MU", null ],

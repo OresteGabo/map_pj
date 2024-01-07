@@ -24,8 +24,6 @@ map_pj_autogen/timestamp: \
   /home/oreste/Desktop/M1/map_pj/CMakeLists.txt \
   /home/oreste/Desktop/M1/map_pj/Car.cpp \
   /home/oreste/Desktop/M1/map_pj/Car.h \
-  /home/oreste/Desktop/M1/map_pj/CarConnectionManager.cpp \
-  /home/oreste/Desktop/M1/map_pj/CarConnectionManager.h \
   /home/oreste/Desktop/M1/map_pj/Hexagon.cpp \
   /home/oreste/Desktop/M1/map_pj/Hexagon.h \
   /home/oreste/Desktop/M1/map_pj/MapWidget.cpp \

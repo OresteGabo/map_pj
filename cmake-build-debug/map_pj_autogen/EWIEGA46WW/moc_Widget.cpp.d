@@ -3,7 +3,6 @@
   /home/oreste/Desktop/M1/map_pj/App.h \
   /home/oreste/Desktop/M1/map_pj/Arret.h \
   /home/oreste/Desktop/M1/map_pj/Car.h \
-  /home/oreste/Desktop/M1/map_pj/CarConnectionManager.h \
   /home/oreste/Desktop/M1/map_pj/Hexagon.h \
   /home/oreste/Desktop/M1/map_pj/Path.h \
   /home/oreste/Desktop/M1/map_pj/PathNode.h \
@@ -260,11 +259,9 @@
   /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \
   /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
   /usr/include/x86_64-linux-gnu/gnu/stubs.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtCore/QObject \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/QPointF \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/QRandomGenerator \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/QString \
-  /usr/include/x86_64-linux-gnu/qt5/QtCore/QVector \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qalgorithms.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qarraydata.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qatomic.h \

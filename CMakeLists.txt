@@ -29,8 +29,7 @@ add_executable(map_pj main.cpp
         Hexagon.h
         MapWidget.cpp
         MapWidget.h
-        CarConnectionManager.cpp
-        CarConnectionManager.h)
+)
 target_link_libraries(map_pj
         Qt5::Core
         Qt5::Gui

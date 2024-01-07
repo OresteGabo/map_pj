@@ -163,7 +163,7 @@ void Widget::clearDebugOutput() {
 
 void Widget::displayCarsInfo() {
     // Assuming you have a function to get the cars information from App
-    const std::vector<Car*>& cars = d_app.getCars();  // Replace with your actual function to get the cars
+    const QVector<Car*>& cars = d_app.getCars();  // Replace with your actual function to get the cars
 
     // Display car information in the QPlainTextEdit
     logMessage("\n");
