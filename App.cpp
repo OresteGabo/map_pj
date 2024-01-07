@@ -252,3 +252,49 @@ void App::drawPaths(QPainter& painter) const {
 void App::logMessage(const QString &message, QPlainTextEdit *debugOutput) const {
     debugOutput->appendPlainText(message);
 }
+
+void App::updateHexagons() {
+    for (Hexagon& hexagon : hexagons) {
+        hexagon.setIsCarInside(false);  // Reset the flag for each hexagon
+
+        for (int x = 0; x < cars.size(); x++) {
+            if (hexagon.isPointInside(cars[x]->getPosition())) {
+                hexagon.setIsCarInside(true);
+                break;  // No need to check other cars once one is inside
+            }
+        }
+        //hexagon.draw(painter);
+    }
+
+}
+
+void App::drawHexagons(QPainter &painter) const {
+    for(const Hexagon& hexagon:hexagons){
+        hexagon.draw(painter);
+    }
+}
+void App::initialiseHexagones() {
+    qreal hexSize = 30.0;  // Adjust size as needed
+    int numRows = 20;
+    int numCols = 40;
+
+    for (int row = 0; row < numRows; ++row) {
+        for (int col = 0; col < numCols; ++col) {
+            qreal x = col * 1.5 * hexSize;
+            qreal y = row * sqrt(3) * hexSize;
+
+            if (col % 2 == 1) {
+                y += sqrt(3) / 2 * hexSize;
+            }
+
+            QPointF hexCenter(x, y);
+            Hexagon hexagon(hexCenter, hexSize);
+            hexagons.push_back(hexagon);
+        }
+    }
+
+    //toggleHexagonsButton = new QPushButton(!hexagonsVisible?"Afficher les mailles":"Masquer les mailles", this);
+    //toggleHexagonsButton->setGeometry(350, 10, 150, 30);
+    //connect(toggleHexagonsButton, &QPushButton::clicked, this, &Widget::toggleHexagonsVisibility);
+
+}

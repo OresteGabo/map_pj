@@ -33,25 +33,11 @@ void Widget::paintEvent(QPaintEvent*) {
     QPixmap backgroundImage("bg.png");
     painter.drawPixmap(rect(), backgroundImage, backgroundImage.rect());
 
-    if (hexagonsVisible) {
-        for (Hexagon& hexagon : hexagons) {
-            hexagon.setIsCarInside(false);  // Reset the flag for each hexagon
 
-            for (int x = 0; x < d_app.getCars().size(); x++) {
-                if (hexagon.isPointInside(d_app.getCars()[x]->getPosition())) {
-                    hexagon.setIsCarInside(true);
-                    break;  // No need to check other cars once one is inside
-                }
-            }
-            hexagon.draw(painter);
-        }
-
-    }
 
     if (hexagonsVisible) {
-        for (const Hexagon& hexagon : hexagons) {
-            hexagon.draw(painter);
-        }
+        d_app.updateHexagons();
+        d_app.drawHexagons(painter);
     }
 
     // Call the custom drawing function for your app
@@ -136,29 +122,10 @@ void Widget::initialiseDebugOutput() {
 }
 
 void Widget::initialiseHexagones() {
-    qreal hexSize = 30.0;  // Adjust size as needed
-    int numRows = 20;
-    int numCols = 40;
-
-    for (int row = 0; row < numRows; ++row) {
-        for (int col = 0; col < numCols; ++col) {
-            qreal x = col * 1.5 * hexSize;
-            qreal y = row * sqrt(3) * hexSize;
-
-            if (col % 2 == 1) {
-                y += sqrt(3) / 2 * hexSize;
-            }
-
-            QPointF hexCenter(x, y);
-            Hexagon hexagon(hexCenter, hexSize);
-            hexagons.push_back(hexagon);
-        }
-    }
-
+    d_app.initialiseHexagones();
     toggleHexagonsButton = new QPushButton(!hexagonsVisible?"Afficher les mailles":"Masquer les mailles", this);
     toggleHexagonsButton->setGeometry(350, 10, 150, 30);
     connect(toggleHexagonsButton, &QPushButton::clicked, this, &Widget::toggleHexagonsVisibility);
-
 }
 
 void Widget::toggleHexagonsVisibility() {

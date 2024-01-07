@@ -17,6 +17,7 @@
 #include "Arret.h"
 #include "Car.h"
 #include "Path.h"
+#include "Hexagon.h"
 #include <QRandomGenerator>
 
 class App {
@@ -31,12 +32,16 @@ public:
     void drawCars(QPainter& painter) const;
     void drawPaths(QPainter& painter) const;
     void logMessage(const QString &message, QPlainTextEdit *debugOutput )const;
+    void updateHexagons();
+    void drawHexagons(QPainter&)const;
+    void initialiseHexagones();
 
 
 private:
     std::vector<Arret*> arrets;
     std::vector<Car*> cars;
     std::vector<Path*>paths;
+    QVector<Hexagon> hexagons;
 };
 
 

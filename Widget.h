@@ -45,7 +45,7 @@ private:
     QTimer* animationTimer;
     QPushButton* simulationButton,*toggleHexagonsButton,*clearButton,*carsInfoButton,*toggleArretsButton;
     QSlider* simulationSpeedSlider;
-    QVector<Hexagon> hexagons;
+
     QPlainTextEdit* debugOutput;
     bool hexagonsVisible;
     static int counterArrets;
