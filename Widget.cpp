@@ -69,9 +69,7 @@ void Widget::updateAnimation() {
     qreal elapsedTime = animationTimer->interval() / qreal(animationDuration);
 
     // Update the positions of all Cars
-    for (Car* car : d_app.getCars()) {
-        car->updatePosition(elapsedTime);
-    }
+    d_app.updateCarPositions(elapsedTime);
 
     // Check if the animation is complete
     if (animationTimer->isActive()) {
@@ -170,7 +168,9 @@ void Widget::displayCarsInfo() {
     // Display car information in the QPlainTextEdit
     logMessage("\n");
     for (const Car* car : cars) {
-        logMessage(car->toString());
+        if(car){
+            logMessage(car->toString());
+        }
     }
 }
 
