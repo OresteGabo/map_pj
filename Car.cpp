@@ -3,7 +3,8 @@
 #include <QBrush>
 #include <QtMath>
 
-Car::Car(PathNode* destinationPathHead, double speed,const QPixmap& car,double frequence) :
+Car::Car(int id,PathNode* destinationPathHead, double speed,const QPixmap& car,double frequence) :
+id(id),
 speed(speed), destinationPathHead(destinationPathHead),
 position(destinationPathHead->getArret()->toPoint()),
 carImage(car),
@@ -45,9 +46,15 @@ void Car::updatePosition(qreal elapsedTime) {
             speed = 0.0;
         }
     }
+    checkForConnections();
 }
 
 void Car::draw(QPainter& painter) const {
+    //painter.setPen(Qt::NoPen);  // Set no outline for the circles
+    painter.setBrush(Qt::Dense7Pattern);
+
+    int radius = frequence ;  // Adjust scaleFactor as needed
+    painter.drawEllipse(position, radius, radius);
     // Draw the car image at the current position
     painter.drawPixmap(position.toPoint() - QPoint(carImage.width() / 2, carImage.height() / 2), carImage);
 }
@@ -58,7 +65,7 @@ void Car::logMessage(const QString &message, QPlainTextEdit *debugOutput) const 
 }
 
 QString Car::toString() const {
-    return QString("Car info:\n\tspeed %1,\n\tposition (%2,%3) \n\tnext_destination %4(%5,%6)\n\tfrequence %7")
+    return QString("Car info(N%8):\n\tspeed %1,\n\tposition (%2,%3) \n\tnext_destination %4(%5,%6)\n\tfrequence %7")
     .arg(speed)
     .arg(position.x())
     .arg(position.y())
@@ -66,10 +73,57 @@ QString Car::toString() const {
     .arg(nextDestinationNode->getArret()->x())
     .arg(nextDestinationNode->getArret()->y())
     .arg(frequence)
+    .arg(id)
     ;
 }
 
 QPointF Car::getPosition() const {
     return position;
 }
+
+
+void Car::checkForConnections() {
+    for (Car* connectedCar : connectedCars) {
+        if (connectedCar && !checkProximity(connectedCar)) {
+            // If the connected car is not in proximity, remove the connection
+            connectedCar->connectedCars.removeOne(this);
+            connectedCars.removeOne(connectedCar);
+            qDebug() << "Connection removed: Car" << toString() << " and Car" << connectedCar->toString();
+        }
+    }
+
+    // Iterate through all cars and check for new connections
+    const QVector<QPair<Car*, Car*>>& allConnections = CarConnectionManager::instance()->getConnectedCars();
+    for (const QPair<Car*, Car*>& connectionPair : allConnections) {
+        Car* otherCar = nullptr;
+
+        // Determine the other car in the connection pair
+        if (connectionPair.first == this) {
+            otherCar = connectionPair.second;
+        } else if (connectionPair.second == this) {
+            otherCar = connectionPair.first;
+        }
+
+        if (otherCar && !connectedCars.contains(otherCar) && checkProximity(otherCar)) {
+            // If the car is not already connected and is in proximity, add the connection
+            connectedCars.append(otherCar);
+            otherCar->connectedCars.append(this);
+            qDebug() << "New connection: Car" << toString() << " and Car" << otherCar->toString();
+        }
+    }
+}
+
+
+
+bool Car::checkProximity(const Car *otherCar) const {
+    // Calculate the distance between the centers of the imaginary circles
+    double distance = QLineF(position, otherCar->getPosition()).length();
+
+    // Sum of the radii of the imaginary circles
+    double combinedRadius = frequence + otherCar->frequence;
+
+    // If the distance is less than the sum of the radii, the circles intersect
+    return distance < combinedRadius;
+}
+
 
