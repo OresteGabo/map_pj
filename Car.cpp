@@ -116,13 +116,15 @@ const QVector<Car *> &Car::getConnectedCars() const {
 
 bool Car::connectedTo(const Car *car) const {
     QPointF position2 = car->getPosition();
+    double radius1=frequence;
     double radius2 = car->getFrequence();
 
     // Calculate the distance between the centers of the circles
     double distance = std::hypot(position.x() - position2.x(), position.y() - position2.y());
 
     // Determine if the circles intersect based on their radii and distance
-    return distance < (getRadius() + radius2);
+    //return distance < (getRadius() + radius2);
+    return radius1 > distance || radius2> distance;
 }
 
 int Car::getRadius() const {

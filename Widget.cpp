@@ -104,17 +104,7 @@ double mapValue(double value, double inMin, double inMax, double outMin, double 
 
     return mappedValue;
 }
-/*
-int main() {
-    // Example usage
-    int inputValue = 50; // Replace with your actual value
-    double mappedResult = mapValue(inputValue, 0, 100, 0.5, 2);
 
-    std::cout << "Mapped value: " << mappedResult << std::endl;
-
-    return 0;
-}
-*/
 void Widget::updateSimulationSpeed(int speed) {
     // Update the animation timer interval based on the simulation speed slider
     int newInterval = static_cast<int>(animationDuration / (speed / 50.0));
