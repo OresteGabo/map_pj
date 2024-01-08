@@ -93,16 +93,42 @@ void Widget::toggleSimulation() {
         logMessage("\t>Simulation lancée");
     }
 }
+#include <iostream>
 
+double mapValue(double value, double inMin, double inMax, double outMin, double outMax) {
+    // Ensure the input value is within the specified range
+    value = std::min(std::max(value, inMin), inMax);
+
+    // Map the value from the input range to the output range
+    double mappedValue = outMin + (value - inMin) * (outMax - outMin) / (inMax - inMin);
+
+    return mappedValue;
+}
+/*
+int main() {
+    // Example usage
+    int inputValue = 50; // Replace with your actual value
+    double mappedResult = mapValue(inputValue, 0, 100, 0.5, 2);
+
+    std::cout << "Mapped value: " << mappedResult << std::endl;
+
+    return 0;
+}
+*/
 void Widget::updateSimulationSpeed(int speed) {
     // Update the animation timer interval based on the simulation speed slider
     int newInterval = static_cast<int>(animationDuration / (speed / 50.0));
     animationTimer->setInterval(newInterval);
 
+    double mappedResult = mapValue(simulationSpeedSlider->value(), 0, 100, 1, 1.5);
+    //double mappedValue = outMin + (value - inMin) * (outMax - outMin) / (inMax - inMin);
+
+
     // Set the sleep duration between iterations based on the simulation speed
     // This will make the simulation slower as the slider moves to the right
-    int sleepDuration = static_cast<int>(animationDuration / speed);
+    int sleepDuration = static_cast<int>(animationDuration * mappedResult / speed);
     animationTimer->setInterval(sleepDuration);
+    qDebug()<<"Animation duration is "+QString::number(sleepDuration);
 }
 
 void Widget::logMessage(const QString& message) {
@@ -155,6 +181,10 @@ void Widget::initialiseButtons() {
     toggleArretsButton->setGeometry(500, 10, 150, 30);
     connect(toggleArretsButton, &QPushButton::clicked, this, &Widget::toggleArretsVisibility);
 
+    restartButton = new QPushButton("Restart", this);
+    restartButton->setGeometry(650, 10, 150, 30);
+    connect(restartButton, &QPushButton::clicked, this, &Widget::restartSimulation);
+
 }
 
 void Widget::clearDebugOutput() {
@@ -178,9 +208,12 @@ void Widget::initialiseSlider() {
 // Create simulation speed slider
     simulationSpeedSlider = new QSlider(Qt::Horizontal, this);
     simulationSpeedSlider->setGeometry(180, 10, 150, 30);
-    simulationSpeedSlider->setMinimum(1);
+    simulationSpeedSlider->setMinimum(0);
     simulationSpeedSlider->setMaximum(100);
     simulationSpeedSlider->setValue(50);  // Initial speed
+    //simulationSpeedSlider->setTickInterval(0.1);
+    //simulationSpeedSlider->setWindowIconText("Helo");
+    qDebug()<<"simulationSpeedSlider initialsed at "+simulationSpeedSlider->value();
     connect(simulationSpeedSlider, &QSlider::valueChanged, this, &Widget::updateSimulationSpeed);
 
 }
@@ -188,5 +221,23 @@ void Widget::initialiseSlider() {
 void Widget::toggleArretsVisibility() {
     arretsVisible = !arretsVisible;
     toggleArretsButton->setText(arretsVisible ? "Masquer les arrêts" : "Afficher les arrêts");
+    update();
+}
+
+void Widget::restartSimulation() {
+    // Stop the current simulation if it's running
+    if (animationTimer->isActive()) {
+        animationTimer->stop();
+        simulationButton->setText("Lancer Simulation");
+        logMessage("\t>Simulation arrêtée");
+    }
+
+
+    // Move every car back to its initial position
+    for (Car* car : d_app.getCars()) {
+        car->resetPosition();  // Add a function in Car class to reset the position
+    }
+
+    // Redraw the widget
     update();
 }

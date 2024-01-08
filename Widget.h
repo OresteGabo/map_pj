@@ -35,6 +35,7 @@ private slots:
     void logMessage(const QString& message);
     void toggleHexagonsVisibility();
     void toggleArretsVisibility();
+    void restartSimulation();
 
 
 
@@ -50,6 +51,7 @@ private:
     bool hexagonsVisible;
     static int counterArrets;
     bool arretsVisible;
+    QPushButton* restartButton;
 
 
     void initialiseDebugOutput();
