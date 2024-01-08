@@ -73,9 +73,9 @@ QString Car::toString() const {
     .arg(speed)
     .arg(position.x())
     .arg(position.y())
-    .arg(nextDestinationNode->getArret()->getName())
-    .arg(nextDestinationNode->getArret()->x())
-    .arg(nextDestinationNode->getArret()->y())
+    .arg(nextDestinationNode? nextDestinationNode->getArret()->getName():"NULL")
+    .arg(nextDestinationNode ? QString::number(nextDestinationNode->getArret()->x()):"NULL")
+    .arg(nextDestinationNode? QString::number(nextDestinationNode->getArret()->y()):"NULL")
     .arg(frequence)
     .arg(id)
     ;
@@ -84,6 +84,7 @@ QString Car::toString() const {
         result += " " + QString::number(connectedCar->getId());
     }
     return result;
+
 }
 
 QPointF Car::getPosition() const {
@@ -126,6 +127,11 @@ bool Car::connectedTo(const Car *car) const {
 
 int Car::getRadius() const {
     return frequence;
+}
+
+void Car::resetPosition() {
+    position=QPointF(destinationPathHead->getArret()->x(),destinationPathHead->getArret()->y());
+    nextDestinationNode=destinationPathHead->next;
 }
 
 

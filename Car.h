@@ -22,7 +22,7 @@ public:
     Car(int id=0,PathNode* destinationPathHead = nullptr,
         double speed = 100.0,
         const QPixmap& car=QPixmap("car.png"),
-        double frequence=QRandomGenerator::global()->bounded(10, 100)
+        double frequence=QRandomGenerator::global()->bounded(10, 300)
                 );
 
     void updatePosition(qreal elapsedTime,QVector<Car*> allCars);
@@ -33,6 +33,7 @@ public:
     void updateConnectedCars(QVector<Car*> allCars);
     bool connectedTo(const Car*)const ;
     int getRadius()const;
+    void resetPosition();
 
     double getFrequence() const;
 
