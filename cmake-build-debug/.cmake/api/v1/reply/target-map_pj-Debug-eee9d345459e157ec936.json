@@ -31,7 +31,7 @@
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 33,
+				"line" : 31,
 				"parent" : 0
 			}
 		]
@@ -124,19 +124,18 @@
 				8,
 				10,
 				12,
-				14,
-				16
+				14
 			]
 		}
 	],
 	"dependencies" : 
 	[
 		{
-			"backtrace" : 0,
-			"id" : "map_pj_autogen::@6890427a1f51a3e7e1df"
+			"id" : "map_pj_autogen_timestamp_deps::@6890427a1f51a3e7e1df"
 		},
 		{
-			"id" : "map_pj_autogen_timestamp_deps::@6890427a1f51a3e7e1df"
+			"backtrace" : 0,
+			"id" : "map_pj_autogen::@6890427a1f51a3e7e1df"
 		}
 	],
 	"id" : "map_pj::@6890427a1f51a3e7e1df",
@@ -196,8 +195,7 @@
 				8,
 				10,
 				12,
-				14,
-				16
+				14
 			]
 		},
 		{
@@ -210,22 +208,21 @@
 				9,
 				11,
 				13,
-				15,
-				17
+				15
 			]
 		},
 		{
 			"name" : "",
 			"sourceIndexes" : 
 			[
-				18
+				16
 			]
 		},
 		{
 			"name" : "CMake Rules",
 			"sourceIndexes" : 
 			[
-				19
+				17
 			]
 		}
 	],
@@ -319,17 +316,6 @@
 		{
 			"backtrace" : 1,
 			"path" : "Hexagon.h",
-			"sourceGroupIndex" : 1
-		},
-		{
-			"backtrace" : 1,
-			"compileGroupIndex" : 0,
-			"path" : "MapWidget.cpp",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 1,
-			"path" : "MapWidget.h",
 			"sourceGroupIndex" : 1
 		},
 		{

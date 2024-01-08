@@ -60,8 +60,8 @@ void Path::draw(QPainter& painter) const {
     PathNode* s=head;
     if(s==nullptr)return;
     while(s->next){
-        painter.drawLine(s->getArret()->x(),s->getArret()->y(),s->next->getArret()->x(),s->next->getArret()->y());
-        painter.drawLine(s->getArret()->x(),s->getArret()->y()+10,s->next->getArret()->x(),s->next->getArret()->y()+10);
+        /*painter.drawLine(s->getArret()->x(),s->getArret()->y(),s->next->getArret()->x(),s->next->getArret()->y());
+        painter.drawLine(s->getArret()->x(),s->getArret()->y()+10,s->next->getArret()->x(),s->next->getArret()->y()+10);*/
         s=s->next;
     }
 }

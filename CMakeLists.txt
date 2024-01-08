@@ -27,8 +27,6 @@ add_executable(map_pj main.cpp
         Path.h
         Hexagon.cpp
         Hexagon.h
-        MapWidget.cpp
-        MapWidget.h
 )
 target_link_libraries(map_pj
         Qt5::Core

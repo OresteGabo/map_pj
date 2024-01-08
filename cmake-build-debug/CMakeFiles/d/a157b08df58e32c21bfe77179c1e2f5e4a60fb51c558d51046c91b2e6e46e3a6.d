@@ -26,8 +26,6 @@ map_pj_autogen/timestamp: \
   /home/oreste/Desktop/M1/map_pj/Car.h \
   /home/oreste/Desktop/M1/map_pj/Hexagon.cpp \
   /home/oreste/Desktop/M1/map_pj/Hexagon.h \
-  /home/oreste/Desktop/M1/map_pj/MapWidget.cpp \
-  /home/oreste/Desktop/M1/map_pj/MapWidget.h \
   /home/oreste/Desktop/M1/map_pj/Path.cpp \
   /home/oreste/Desktop/M1/map_pj/Path.h \
   /home/oreste/Desktop/M1/map_pj/PathNode.cpp \
@@ -76,7 +74,6 @@ map_pj_autogen/timestamp: \
   /usr/include/c++/11/bits/hash_bytes.h \
   /usr/include/c++/11/bits/invoke.h \
   /usr/include/c++/11/bits/ios_base.h \
-  /usr/include/c++/11/bits/istream.tcc \
   /usr/include/c++/11/bits/iterator_concepts.h \
   /usr/include/c++/11/bits/list.tcc \
   /usr/include/c++/11/bits/locale_classes.h \
@@ -166,8 +163,6 @@ map_pj_autogen/timestamp: \
   /usr/include/c++/11/initializer_list \
   /usr/include/c++/11/ios \
   /usr/include/c++/11/iosfwd \
-  /usr/include/c++/11/iostream \
-  /usr/include/c++/11/istream \
   /usr/include/c++/11/iterator \
   /usr/include/c++/11/limits \
   /usr/include/c++/11/list \
@@ -295,18 +290,9 @@ map_pj_autogen/timestamp: \
   /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \
   /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
   /usr/include/x86_64-linux-gnu/gnu/stubs.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtCore/QFlags \
-  /usr/include/x86_64-linux-gnu/qt5/QtCore/QIODevice \
-  /usr/include/x86_64-linux-gnu/qt5/QtCore/QMetaType \
-  /usr/include/x86_64-linux-gnu/qt5/QtCore/QObject \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/QPointF \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/QRandomGenerator \
-  /usr/include/x86_64-linux-gnu/qt5/QtCore/QSharedDataPointer \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/QString \
-  /usr/include/x86_64-linux-gnu/qt5/QtCore/QUrl \
-  /usr/include/x86_64-linux-gnu/qt5/QtCore/QVariant \
-  /usr/include/x86_64-linux-gnu/qt5/QtCore/QVector \
-  /usr/include/x86_64-linux-gnu/qt5/QtCore/QtMath \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qalgorithms.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qarraydata.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qatomic.h \
@@ -321,9 +307,7 @@ map_pj_autogen/timestamp: \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qcontainertools_impl.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qcontiguouscache.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qcoreevent.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtCore/qcryptographichash.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qdatastream.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtCore/qdatetime.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qdebug.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qfile.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qfiledevice.h \
@@ -341,7 +325,6 @@ map_pj_autogen/timestamp: \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qlogging.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qmap.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qmargins.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtCore/qmath.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qmetatype.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qnamespace.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qnumeric.h \
@@ -417,24 +400,6 @@ map_pj_autogen/timestamp: \
   /usr/include/x86_64-linux-gnu/qt5/QtGui/qtransform.h \
   /usr/include/x86_64-linux-gnu/qt5/QtGui/qvector2d.h \
   /usr/include/x86_64-linux-gnu/qt5/QtGui/qwindowdefs.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtNetwork/QNetworkAccessManager \
-  /usr/include/x86_64-linux-gnu/qt5/QtNetwork/QNetworkReply \
-  /usr/include/x86_64-linux-gnu/qt5/QtNetwork/QNetworkRequest \
-  /usr/include/x86_64-linux-gnu/qt5/QtNetwork/QSslConfiguration \
-  /usr/include/x86_64-linux-gnu/qt5/QtNetwork/QSslPreSharedKeyAuthenticator \
-  /usr/include/x86_64-linux-gnu/qt5/QtNetwork/qabstractsocket.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtNetwork/qnetworkaccessmanager.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtNetwork/qnetworkreply.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtNetwork/qnetworkrequest.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtNetwork/qssl.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtNetwork/qsslcertificate.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtNetwork/qsslconfiguration.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtNetwork/qsslerror.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtNetwork/qsslpresharedkeyauthenticator.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtNetwork/qsslsocket.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtNetwork/qtcpsocket.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtNetwork/qtnetwork-config.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtNetwork/qtnetworkglobal.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QPlainTextEdit \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QPushButton \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QSlider \

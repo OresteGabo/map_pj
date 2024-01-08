@@ -48,11 +48,12 @@ private:
     QPixmap carImage;
     double frequence;
     QVector<Car*> connectedCars;
+    int id;
 public:
     const QVector<Car *> &getConnectedCars() const;
 
-private:
-    int id;
+
+
 public:
 };
 
