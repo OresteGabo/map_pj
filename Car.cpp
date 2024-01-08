@@ -79,7 +79,7 @@ QString Car::toString() const {
     .arg(frequence)
     .arg(id)
     ;
-    result += "\nConnected Cars:";
+    result += "\n\tConnected Cars:";
     for (const Car* connectedCar : connectedCars) {
         result += " " + QString::number(connectedCar->getId());
     }

@@ -39,8 +39,6 @@ void Widget::paintEvent(QPaintEvent*) {
         d_app.updateHexagons();
         d_app.drawHexagons(painter);
     }
-
-    // Call the custom drawing function for your app
     dessineApp(painter, d_app);
 
 }
@@ -56,7 +54,7 @@ void Widget::dessineApp(QPainter& painter, const App& app) {
 }
 int Widget::counterArrets=0;
 void Widget::mousePressEvent(QMouseEvent* event) {
-    // Get the position (x, y) when the mouse is clicked
+
     int x = event->x();
     int y = event->y();
     counterArrets++;
@@ -68,12 +66,9 @@ void Widget::updateAnimation() {
     // Update the animation progress based on the elapsed time
     qreal elapsedTime = animationTimer->interval() / qreal(animationDuration);
 
-    // Update the positions of all Cars
     d_app.updateCarPositions(elapsedTime);
 
-    // Check if the animation is complete
     if (animationTimer->isActive()) {
-        // Redraw the widget
         update();
     } else {
         simulationButton->setText("Lancer Simulation");

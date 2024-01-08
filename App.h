@@ -3,23 +3,15 @@
 //
 #ifndef MAP_PJ_APP_H
 #define MAP_PJ_APP_H
-
-
-
-
 #include <vector>
 #include "Arret.h"
-
-// App.h
 #pragma once
-
 #include <vector>
 #include "Arret.h"
 #include "Car.h"
 #include "Path.h"
 #include "Hexagon.h"
 #include <QRandomGenerator>
-
 class App {
 public:
     App();
@@ -40,21 +32,10 @@ public:
     void dessineApp(QPainter& painter,bool arretsVisible);
     void updateConnectedCars();
 
-
-
 private:
     QVector<Arret*> arrets;
     QVector<Car*> cars;
     QVector<Path*>paths;
     QVector<Hexagon> hexagons;
-
 };
-
-
-
 #endif //MAP_PJ_APP_H
-
-
-
-
-

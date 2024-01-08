@@ -269,6 +269,22 @@ void App::drawCars(QPainter& painter) const {
     for (const Car* car : cars) {
         car->draw(painter);
     }
+
+    //Display a line between connected cars (Idea from other group presentation)
+    for(int x=0;x<cars.size();x++){
+        for(int y=x;y<cars.size();y++){
+            if(cars[x]->connectedTo(cars[y])){
+                if(x!=y){
+                    QPen pen=QPen();
+                    pen.setStyle(Qt::SolidLine);
+                    pen.setWidth(5);
+                    pen.setBrush(Qt::cyan);
+                    painter.setPen(pen);
+                    painter.drawLine(cars[x]->getPosition(),cars[y]->getPosition());
+                }
+            }
+        }
+    }
 }
 void App::drawPaths(QPainter& painter) const {
     // Draw all paths in the App
