@@ -197,23 +197,29 @@ void App::initialize() {
 
 
     Path* p1=new Path(nodes[37]);
-    p1->addNode(nodes[36])->addNode(nodes[35])->addNode(nodes[34])->addNode(nodes[33])->addNode(nodes[62])->addNode(nodes[60])->addNode(nodes[57])->addNode(nodes[54])->addNode(nodes[106])->addNode(nodes[105])->addNode(nodes[103])->addNode(nodes[104]);
+    p1->addNode(nodes[36])->addNode(nodes[35])->addNode(nodes[34])->addNode(nodes[33])->addNode(nodes[62])->addNode(nodes[60])->addNode(nodes[57])->addNode(nodes[54])->addNode(nodes[106])->addNode(nodes[105])->addNode(nodes[103])->addNode(nodes[104])    ;
 
     Path* p2=new Path(nodes[1]);
-    p2->addNode(nodes[0])->addNode(nodes[2])->addNode(nodes[3])->addNode(nodes[5])->addNode(nodes[7])->addNode(nodes[11]);
+    p2->addNode(nodes[0])->addNode(nodes[2])->addNode(nodes[3])->addNode(nodes[5])->addNode(nodes[7])->addNode(nodes[11])
+            ->addNode(nodes[10])->addNode(nodes[6])
+            ->addNode(nodes[8])->addNode(nodes[9])->addNode(nodes[12])
+            ->addNode(nodes[13])->addNode(nodes[14])->addNode(nodes[17])->addNode(nodes[52])->addNode(nodes[105]);
 
     Path* p3=new Path(nodes[145]);
     p3->addNode(nodes[172])->addNode(nodes[157])->addNode(nodes[138])->addNode(nodes[136])->addNode(nodes[137])->addNode(nodes[135])->addNode(nodes[134])->addNode(nodes[159])->addNode(nodes[132]);
 
     Path* p4= new Path(nodes[110]);
-    p4->addNode(nodes[111])->addNode(nodes[112])->addNode(nodes[120])->addNode(nodes[122])->addNode(nodes[155]);
+    p4->addNode(nodes[111])->addNode(nodes[112])->addNode(nodes[120])->addNode(nodes[119])->addNode(nodes[122])->addNode(nodes[154])->addNode(nodes[155]);
+
     Path* p5=new Path(nodes[143]);
-    p5->addNode(nodes[126])->addNode(nodes[125])->addNode(nodes[164])->addNode(nodes[123])->addNode(nodes[166])->addNode(nodes[117])->addNode(nodes[115])->addNode(nodes[113]);
+    p5->addNode(nodes[125])
+            ->addNode(nodes[165])->addNode(nodes[163])
+    ->addNode(nodes[123])->addNode(nodes[166])->addNode(nodes[117])->addNode(nodes[115])->addNode(nodes[113]);
 
     Path* p6= new Path(nodes[90]);
     p6->addNode(nodes[89])->addNode(nodes[88])->addNode(nodes[87])->addNode(nodes[85])->addNode(nodes[84])->addNode(nodes[128])->addNode(nodes[127]);
 
-    qDebug()<<"Hello cars";
+
 
     paths.push_back(p1);
     paths.push_back(p2);
@@ -227,8 +233,8 @@ void App::initialize() {
     auto car1 = new Car(1,p1->getHead(), 120.0);
     auto car2 = new Car(2,p2->getHead(), 350.0);
     auto car3 = new Car(3,p3->getHead(), 320.0);
-    auto car4 = new Car(4,p4->getHead(), 500.0);
-    auto car5 = new Car(5,p5->getHead(), 1320.0);
+    auto car4 = new Car(4,p4->getHead(), 200.0);
+    auto car5 = new Car(5,p5->getHead(), 130.0);
     auto car6 = new Car(6,p6->getHead(), 350.0);
 
     // Add Cars to the vector
