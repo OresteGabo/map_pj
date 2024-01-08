@@ -205,19 +205,39 @@ void App::initialize() {
     Path* p3=new Path(nodes[145]);
     p3->addNode(nodes[172])->addNode(nodes[157])->addNode(nodes[138])->addNode(nodes[136])->addNode(nodes[137])->addNode(nodes[135])->addNode(nodes[134])->addNode(nodes[159])->addNode(nodes[132]);
 
+    Path* p4= new Path(nodes[110]);
+    p4->addNode(nodes[111])->addNode(nodes[112])->addNode(nodes[120])->addNode(nodes[122])->addNode(nodes[155]);
+    Path* p5=new Path(nodes[143]);
+    p5->addNode(nodes[126])->addNode(nodes[125])->addNode(nodes[164])->addNode(nodes[123])->addNode(nodes[166])->addNode(nodes[117])->addNode(nodes[115])->addNode(nodes[113]);
+
+    Path* p6= new Path(nodes[90]);
+    p6->addNode(nodes[89])->addNode(nodes[88])->addNode(nodes[87])->addNode(nodes[85])->addNode(nodes[84])->addNode(nodes[128])->addNode(nodes[127]);
+
+    qDebug()<<"Hello cars";
+
     paths.push_back(p1);
     paths.push_back(p2);
     paths.push_back(p3);
+    paths.push_back(p4);
+    paths.push_back(p5);
+    paths.push_back(p6);
 
 
-    auto car1 = new Car(1,p1->getHead(), 350.0);  // Car associated with Arret 1
-    auto car2 = new Car(2,p2->getHead(), 350.0);  // Car associated with Arret 2
-    auto car3 = new Car(3,p3->getHead(), 320.0);  // Car associated with Arret 3
+
+    auto car1 = new Car(1,p1->getHead(), 120.0);
+    auto car2 = new Car(2,p2->getHead(), 350.0);
+    auto car3 = new Car(3,p3->getHead(), 320.0);
+    auto car4 = new Car(4,p4->getHead(), 500.0);
+    auto car5 = new Car(5,p5->getHead(), 1320.0);
+    auto car6 = new Car(6,p6->getHead(), 350.0);
 
     // Add Cars to the vector
     cars.push_back(car1);
     cars.push_back(car2);
     cars.push_back(car3);
+    cars.push_back(car4);
+    cars.push_back(car5);
+    cars.push_back(car6);
 
     updateConnectedCars();
 

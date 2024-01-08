@@ -22,7 +22,7 @@ public:
     Car(int id=0,PathNode* destinationPathHead = nullptr,
         double speed = 100.0,
         const QPixmap& car=QPixmap("car.png"),
-        double frequence=QRandomGenerator::global()->bounded(10, 1000)
+        double frequence=QRandomGenerator::global()->bounded(10, 100)
                 );
 
     void updatePosition(qreal elapsedTime,QVector<Car*> allCars);
